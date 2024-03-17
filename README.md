@@ -1,9 +1,7 @@
 # JavaScript
 
 - Javascript is a lightweight interpreted or JIT complied language
-
 - It is a first class function
-
 - JavaScript is a prototype-based, multi-paradigm, single thread language
 
 ```
