@@ -1,7 +1,7 @@
 /**
  * * Infinity is the global value representing infinity. Same value as Number.POSITIVE_INFINITY
  *
- * *  Writeable: no
+ * * Writeable: no
  * * Enumerable: no
  * * Configurable: no
  *
