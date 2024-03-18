@@ -1,9 +1,9 @@
 /**
  * * The globalThis provides the way to access global objects, regardless of the environment it is running in. So it can run in multiple environment such as browser and Node.js. without modification.
  *
- * * Writeable: true
- * * Enumerable: false
- * * Configurable: true
+ * * Writeable: yes
+ * * Enumerable: no
+ * * Configurable: yes
  *
  * * In many environment it refers to actual global object but in browser, due to iframe and cross-window security consideration it refers to proxy around the global object ( which can't be access directly )
  */
