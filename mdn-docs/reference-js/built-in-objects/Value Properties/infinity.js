@@ -1,9 +1,11 @@
 /**
- * * Infinity is the global value representing infinity.
+ * * Infinity is the global value representing infinity. Same value as Number.POSITIVE_INFINITY
  *
  * *  Writeable: no
  * * Enumerable: no
  * * Configurable: no
+ *
+ * * The value Infinity (positive infinity) is greater than any other number.
  */
 
 const maxNumber = Math.pow(10, 1000);
