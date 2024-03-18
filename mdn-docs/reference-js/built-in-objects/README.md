@@ -73,7 +73,7 @@ The term "global objects" (or standard built-in objects) refer to the **object i
     - Float32Array
     - Float64Array
 
-8.  Indexed collections
+8.  Keyed collections
 
     - Map
     - Set
