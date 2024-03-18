@@ -1,5 +1,5 @@
 /**
- * * The globalThis provides the way to access global objects, regardless of the environment it is running in. So it can run in multiple environment such as browser and Node.js. without modification
+ * * The globalThis provides the way to access global objects, regardless of the environment it is running in. So it can run in multiple environment such as browser and Node.js. without modification.
  *
  * * Writeable: true
  * * Enumerable: false
