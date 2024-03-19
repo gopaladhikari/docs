@@ -57,7 +57,7 @@ console.log(typeof undefined);
  * * We can check the existence of global variable using in operator
  */
 
-if ("x" in globalThis) {
+if (x in globalThis) {
   // these statements execute in browser
   console.log("x is defined globally.");
 } else {

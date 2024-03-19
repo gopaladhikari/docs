@@ -13,7 +13,7 @@ const maxNumber = Math.pow(10, 1000);
 console.log(maxNumber); // Infinity
 
 if (maxNumber === Infinity) {
-  console.log(`${maxNumber} is Infinity`);
+  console.log("maxNumber is Infinity");
 }
 
 console.log(Infinity); /* Infinity */

@@ -1,7 +1,7 @@
 /**
  * * NaN is the global value representing "not a number". Same value as Number.NaN
  *
- * *  Writeable: no
+ * * Writeable: no
  * * Enumerable: no
  * * Configurable: no
  */
@@ -37,6 +37,7 @@ console.log(Number.isNaN(NaN)); // true
 function valueIsNaN(v) {
   return v !== v;
 }
+
 console.log(valueIsNaN(1)); // false
 console.log(valueIsNaN(NaN)); // true
 console.log(valueIsNaN(Number.NaN)); // true
@@ -53,6 +54,7 @@ console.log(isNaN(1), Number.isNaN(1n)); // false false
 
 console.log(isNaN("hello world")); // true
 console.log(Number.isNaN("hello world")); // false
+console.log(Number.isNaN("4")); // false because it doesn't coerce
 
 console.log(NaN === "Hello");
 

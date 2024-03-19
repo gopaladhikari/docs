@@ -1,5 +1,5 @@
 /**
- * * The globalThis provides the way to access global objects, regardless of the environment it is running in. So it can run in multiple environment such as browser and Node.js. without modification.
+ * * The globalThis provides the way to access global objects, regardless of the environment it is running in. So it can run in multiple environment such as browser and Node.js without modification.
  *
  * * Writeable: yes
  * * Enumerable: no
@@ -15,12 +15,10 @@ function canMakeHTTPRequest() {
 console.log(canMakeHTTPRequest()); // False in nodejs and true in browser
 
 function canFetch() {
-  return typeof globalThis == "function";
+  return typeof globalThis.fetch == "function";
 }
 
 console.log(canFetch());
-
-console.log();
 
 console.log(globalThis == window); // true in browser
 console.log(globalThis === window); // true in browser
