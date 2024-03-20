@@ -18,14 +18,9 @@ let x = 5;
 
 console.log(eval("x + x + x"));
 
-// * Cannot redeclare eval in global scope but can be redeclared in function scope
-
-// ! const eval = 5;
-
-(() => {
-  const eval = 5;
-  console.log(eval);
-})();
+function check() {
+  console.log(eval()); // reserved keyword in function scope
+}
 
 const expression = new String("2 + 2");
 

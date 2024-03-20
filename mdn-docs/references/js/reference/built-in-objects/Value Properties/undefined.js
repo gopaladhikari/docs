@@ -44,6 +44,10 @@ if (xy === undefined) {
   console.log(undefined, typeof undefined); // foo string
 })("foo");
 
+function check() {
+  const undefined = "Check";
+}
+
 /**
  * * undefined is not the same as null.
  * * typeof undefined is undefined
