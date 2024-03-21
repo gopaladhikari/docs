@@ -1,5 +1,5 @@
 /**
- * * isNaN fnction is a global and Number property which returns true if the value is NaN and false if it is not. It coerce the argument into number if necessary.
+ * * isNaN function is a global and Number property which returns true if the value is NaN and false if it is not. It coerce the argument into number if necessary.
  *
  * * If the argument of isNaN is not a number then it coerce into number and then compares it to NaN.
  *
@@ -7,7 +7,7 @@
  */
 
 const isFinityANumber = isNaN(Infinity); // false
-const isStringFinityANumber = isNaN(Infinity); // false
+const isStringFinityANumber = isNaN("Infinity"); // false
 
 console.log("isStringFinityANumber: ", isStringFinityANumber);
 console.log("isFinityANumber: ", isFinityANumber);
@@ -26,7 +26,7 @@ console.log("isNumberNaN: ", isNumberNaN);
 console.log(Number.isNaN("5")); // false, it is a number
 
 /**
- * * isNaN coerce empty string in 0 and boolean to 0,1 but both are not number so it is a Number
+ * * isNaN coerce empty string into 0 and boolean to 0,1 but both are not number but it is a number after coerce
  */
 
 console.log(isNaN("")); // false

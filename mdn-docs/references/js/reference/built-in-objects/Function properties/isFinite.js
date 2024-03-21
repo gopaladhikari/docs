@@ -19,7 +19,7 @@ console.log(globalThis.isFinite(6)); // true
 console.log(Number.isFinite(60)); // true
 
 /**
- * * When a argument of the isFinite function to number then is coerce to the numebr and compares the resulting to NaN and infinity.
+ * * When a argument of the isFinite function is not a number then is coerce to the numebr and compares the resulting to NaN and infinity.
  *
  * * Number.isFinite is more reliable because it return false for any non number input
  */
@@ -40,4 +40,4 @@ function check(x) {
   return isFinite(x);
 }
 
-console.log(check(45));
+console.log(check(45)); // true

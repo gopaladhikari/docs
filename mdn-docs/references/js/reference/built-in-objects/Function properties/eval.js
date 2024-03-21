@@ -45,7 +45,7 @@ function test() {
   const y = 4;
   // Direct call, uses local scope
   console.log(eval("x + y")); // Result is 6
-  // console.log(eval?.("x + y")); // Uses global scope, throws because x is undefined
+  console.log(eval?.("x + y")); // Uses global scope, throws because x is undefined
 }
 
 test();

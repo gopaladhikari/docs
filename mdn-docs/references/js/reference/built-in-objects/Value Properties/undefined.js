@@ -17,7 +17,7 @@ console.log(test(x));
 
 /**
  * * It is the property in the global object.
- * * If the variable is defined but not assign any value is of type undefined.
+ * * If the variable is declared but not assign any value is of type undefined.
  * * A method or a function also return undefined if any actual value is not returned.
  */
 
@@ -62,10 +62,8 @@ console.log(typeof undefined);
  */
 
 if (x in globalThis) {
-  // these statements execute in browser
   console.log("x is defined globally.");
 } else {
-  // these statements do not execute
   console.log("x is not defined globally.");
 }
 
