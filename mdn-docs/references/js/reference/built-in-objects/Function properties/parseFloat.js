@@ -25,11 +25,11 @@ log(circumference("10.5454545"));
  * * If the argument doesn't fullfill the syntax rules then it returns NaN.
  */
 
-console.log(parseFloat(NaN));
-console.log(parseFloat(3.14));
-console.log(parseFloat("3.14"));
-console.log(parseFloat("  3.14  "));
-console.log(parseFloat("314e-2")); // ignores the invalid characters
-console.log(parseFloat("0.0314E+2")); // ignores the invalid characters
-console.log(parseFloat("3.14some non-digit characters")); // ignores the invalid characters
-console.log(parseFloat("FF2")); // NaN
+log(parseFloat(NaN));
+log(parseFloat(3.14));
+log(parseFloat("3.14"));
+log(parseFloat("  3.14  "));
+log(parseFloat("314e-2")); // ignores the invalid characters
+log(parseFloat("0.0314E+2")); // ignores the invalid characters
+log(parseFloat("3.14some non-digit characters")); // ignores the invalid characters
+log(parseFloat("FF2")); // NaN
