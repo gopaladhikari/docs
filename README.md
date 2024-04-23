@@ -1,8 +1,8 @@
 # JavaScript
 
-- Javascript is a lightweight interpreted or JIT complied language
-- It is a first class function
-- JavaScript is a prototype-based, multi-paradigm, single thread language
+-  Javascript is a lightweight interpreted or JIT complied language
+-  It is a first class function
+-  JavaScript is a prototype-based, multi-paradigm, single thread language
 
 ```
 # Note
@@ -19,3 +19,11 @@
 
 - Single thread language means only one task is executed at a time.
 ```
+
+# TypeScript
+
+-  Typescript adds additional syntax to JavaScript to catch error within the editor.
+
+-  TypeScript code is converted into JavaScript code.
+
+-  Typescript understand JavaScript which proivdes type inference.
