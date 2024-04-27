@@ -1,8 +1,23 @@
+# HTML: HyperText Markup Language
+
+- HTML is the basic building block of any website. It defines the meaning and structure of a web content.
+
+- The name of an element inside a tag is case-insensitive. However, the convention and recommended practice is to write tags in lowercase.
+
+```
+# Note
+
+- Hypertext refers to the links that connects web pages to one another, within single website or multiple websites.
+
+- Markup refers to special elements such as <head>,<title>,<body>,<header>,<footer> and many more.
+
+```
+
 # JavaScript
 
--  Javascript is a lightweight interpreted or JIT complied language
--  It is a first class function
--  JavaScript is a prototype-based, multi-paradigm, single thread language
+- Javascript is a lightweight interpreted or JIT complied language
+- It is a first class function
+- JavaScript is a prototype-based, multi-paradigm, single thread language
 
 ```
 # Note
@@ -22,8 +37,8 @@
 
 # TypeScript
 
--  Typescript adds additional syntax to JavaScript to catch error within the editor.
+- Typescript adds additional syntax to JavaScript to catch error within the editor.
 
--  TypeScript code is converted into JavaScript code.
+- TypeScript code is converted into JavaScript code.
 
--  Typescript understand JavaScript which proivdes type inference.
+- Typescript understand JavaScript which proivdes type inference.
