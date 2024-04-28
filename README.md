@@ -12,6 +12,18 @@
 - Markup refers to special elements such as <head>,<title>,<body>,<header>,<footer> and many more.
 ```
 
+# CSS: Cascading Style Sheets
+
+- CSS is the code that styles the web content. It is not a programming language.
+
+- CSS is selectively used to style HTML elements. For example this CSS selects paragraph text, setting the color to red:
+
+```css
+p {
+	color: red;
+}
+```
+
 # JavaScript
 
 - Javascript is a lightweight interpreted or JIT complied language
