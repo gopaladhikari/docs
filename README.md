@@ -10,7 +10,6 @@
 - Hypertext refers to the links that connects web pages to one another, within single website or multiple websites.
 
 - Markup refers to special elements such as <head>,<title>,<body>,<header>,<footer> and many more.
-
 ```
 
 # JavaScript
