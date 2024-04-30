@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Advanced Text Formatting</title>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<menu>
+					<li>
+						<a href="index.html">Introduction to HTML</a>
+					</li>
+					<li>
+						<a href="text-fundamental.html">Text Fundamental</a>
+					</li>
+					<li>
+						<a href="metadata.html">Metadata</a>
+					</li>
+					<li>
+						<a href="hyperlinks.html">Hyperlinks</a>
+					</li>
+					<li>
+						<a href="advanced-text-formatting.html"
+							>Advanced Text Formatting
+						</a>
+					</li>
+				</menu>
+			</nav>
+		</header>
+
+		<h1>Advanced Text Formatting</h1>
+		<p>
+			Advanced Text Formatting can be used to make marking up quotation,
+			description list, computer code, subscript, superscript, contact
+			information etc.
+		</p>
+		<hr />
+		<h2>Description lists</h2>
+		<p>
+			In <a href="text-fundamental.html"> Text Fundamental </a>, we read about
+			lists are of 3 types: ordered list, you can click
+			<a href="text-fundamental.html#ordered">ordered</a> and
+			<a href="text-fundamental.html#unordered">unordered</a> list to study
+			respective lists, unordered list and description list.
+		</p>
+		<p>
+			The purpose of description list is to markup to a set of items and their
+			associated descriptions, such as terms, definations, question,examples
+			etc.
+		</p>
+		<p>
+			Description list uses the three wrapper than other lists i.e
+			<code>&lt;dl&gt;</code>, <code>&lt;dt&gt;</code> and
+			<code>&lt;dd&gt;</code>, for example
+		</p>
+
+		<i>eg 1, single description single term</i>
+		<dl>
+			<dt>HTML</dt>
+			<dd>
+				HTML is the basic building block of any website. It defines the meaning
+				and structure of a web content.
+			</dd>
+			<dt>CSS</dt>
+			<dd>
+				CSS is the code that styles the web content. It is not a programming
+				language.
+			</dd>
+			<dt>When will I learn HTML and CSS?</dt>
+			<dd>I am learning now.</dd>
+		</dl>
+		<i>eg 2, multiple description single term</i>
+		<dl>
+			<dt>aside</dt>
+			<dd>
+				In drama, where a character shares a comment only with the audience for
+				humorous or dramatic effect. This is usually a feeling, thought, or
+				piece of additional background information.
+			</dd>
+			<dd>
+				In writing, a section of content that is related to the current topic,
+				but doesn't fit directly into the main flow of content so is presented
+				nearby (often in a box off to the side.)
+			</dd>
+		</dl>
+		<hr />
+		<h2 id="quotations">Quotations</h2>
+		<p>
+			If the some content is quoted from somewherem, it should be wrapped inside
+			the <code>&lt;blockquote&gt;</code> tag to signify this and include
+			resource url in cite attribute
+		</p>
+		<p>
+			The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
+			<em>HTML Block Quotation Element</em>) indicates that the enclosed text is
+			an extended quotation.
+		</p>
+		<p>Here is a blockquote:</p>
+		<blockquote
+			cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote"
+		>
+			<p>
+				The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
+				<em>HTML Block Quotation Element</em>) indicates that the enclosed text
+				is an extended quotation.
+			</p>
+		</blockquote>
+
+		<hr />
+		<h2>Inline quotations</h2>
+		<p>
+			Inline quotation works exactly the same way as a block quotation except it
+			use <code>&lt;q&gt;</code> tag and also wraps in double quotes
+		</p>
+		<p>
+			The quote element — <code>&lt;q&gt;</code> — is
+			<q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">
+				intended for short quotations that don't require paragraph breaks.
+			</q>
+		</p>
+		<hr />
+		<h2>Citations</h2>
+		<p>
+			The content of cite in quotation is not really displayed and also doesn't
+			do much in screen reader. so there is
+			<code>&lt;cite&gt; tag to solve this problem.</code>
+		</p>
+		<p>
+			According to the
+			<a href="#quotations"> <cite>blockquote above</cite></a
+			>:
+		</p>
+
+		<blockquote
+			cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote"
+		>
+			<p>
+				The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
+				<em>HTML Block Quotation Element</em>) indicates that the enclosed text
+				is an extended quotation.
+			</p>
+		</blockquote>
+
+		<p>
+			The quote element — <code>&lt;q&gt;</code> — is
+			<q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">
+				intended for short quotations that don't require paragraph breaks.
+			</q>
+			— <a href="/en-US/docs/Web/HTML/Element/q"><cite>MDN q page</cite></a
+			>.
+		</p>
+		<hr />
+		<h2>Abbreviations</h2>
+		<p>
+			Abbreviations are created using the <code>&lt;abbr&gt;</code> tag and it
+			is used to wrap around acronym or abbreviation. Full expansion in provided
+			in title attribute and shows up while hovering.
+		</p>
+		<p>
+			We use <abbr>HTML</abbr>, Hypertext Markup Language, to structure our web
+			documents.
+		</p>
+
+		<p>
+			I think <abbr title="Gopal Adhikari">gopuadks.</abbr> Green did it in the
+			kitchen with the chainsaw.
+		</p>
+
+		<hr />
+		<h2>Marking up contact details</h2>
+		<p>
+			To make contact details clickable, use <code>&lt;address&gt;</code> tag.
+			It should preferly use in footer.
+		</p>
+		<address>Chris Mills, Manchester, The Grim North, UK</address>
+		<p>For more complex markup and other forms</p>
+		<address>
+			<p>
+				Chris Mills<br />
+				Manchester<br />
+				The Grim North<br />
+				UK
+			</p>
+
+			<ul>
+				<li>Tel: 01234 567 890</li>
+				<li>Email: me@grim-north.co.uk</li>
+			</ul>
+		</address>
+		<hr />
+		<h2>Superscript and subscript</h2>
+		<p>
+			We may only need to use one tag to show superscript and subscript text for
+			chemical formulae, and mathematical equations etc so they are
+			<code>&lt;sup&gt;</code> and <code>&lt;sub&gt; </code> tags.
+		</p>
+		<p>My birthday is on the 25<sup>th</sup> of May 2001.</p>
+		<p>
+			Caffeine's chemical formula is
+			C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>.
+		</p>
+		<p>If x<sup>2</sup> is 9, x must equal 3 or -3.</p>
+
+		<hr />
+		<h2>Representing computer code</h2>
+		<p>There are multiple ways to represent computer code using HTML.</p>
+		<dl>
+			<dt><code>1. &lt;code&gt;</code></dt>
+			<dd>For marking up generic pieces of computer code.</dd>
+
+			<dt><code>2. &lt;pre&gt;</code></dt>
+			<dd>
+				For marking up preformatted text, means whitespaces will be rendered
+				identically.
+			</dd>
+
+			<dt><code>3. &lt;var&gt;</code></dt>
+			<dd>For specifically marking up variable names.</dd>
+
+			<dt><code>4. &lt;kbd&gt;</code></dt>
+			<dd>For marking up keyboard input entered into the computer.</dd>
+			<dt><code>4. &lt;samp&gt;</code></dt>
+			<dd>For marking up the output of a computer program</dd>
+		</dl>
+
+		<p>Here is example of this</p>
+		<pre><code>const para = document.querySelector('p');
+
+			para.onclick = function() {
+				alert('Owww, stop poking me!');
+			}</code></pre>
+
+		<p>
+			Select all the text with <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>A</kbd>.
+		</p>
+
+		<pre>$ <kbd>ping mozilla.org</kbd>
+			<samp>PING mozilla.org (63.245.215.20): 56 data bytes
+			64 bytes from 63.245.215.20: icmp_seq=0 ttl=40 time=158.233 ms</samp></pre>
+
+		<hr />
+		<h2>Marking up times and dates</h2>
+		<p>
+			HTML provides a <code>&lt;time&gt;</code> tag to mark up dates and times.
+		</p>
+		<time datetime="2016-01-20">20 January 2016</time>
+		<p>
+			They are many ways to mark up dates and times. Above date can be written
+			as below
+		</p>
+
+		<ul>
+			<li>20 January 2016</li>
+			<li>20th January 2016</li>
+			<li>Jan 20 2016</li>
+			<li>20/01/16</li>
+			<li>01/20/16</li>
+			<li>The 20th of next month</li>
+			<li>20e Janvier 2016</li>
+			<li>2016 年 1 月 20 日</li>
+		</ul>
+
+		<p>
+			The basic example of machine readable date, but their are many others such
+			as
+		</p>
+		<pre>
+  <code>
+  	<!-- Standard simple date -->
+  <time datetime="2016-01-20">20 January 2016</time>
+  <!-- Just year and month -->
+  <time datetime="2016-01">January 2016</time>
+  <!-- Just month and day -->
+  <time datetime="01-20">20 January</time>
+  <!-- Just time, hours and minutes -->
+  <time datetime="19:30">19:30</time>
+  <!-- You can do seconds and milliseconds too! -->
+  <time datetime="19:30:01.856">19:30:01.856</time>
+  <!-- Date and time -->
+  <time datetime="2016-01-20T19:30">7.30pm, 20 January 2016</time>
+  <!-- Date and time with timezone offset -->
+  <time datetime="2016-01-20T19:30+01:00">
+  7.30pm, 20 January 2016 is 8.30pm in France
+  </time>
+  <!-- Calling out a specific week number -->
+  <time datetime="2016-W04">The fourth week of 2016</time>
+		</code>
+	</pre>
+	</body>
+</html>
