@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Hyperlinks</title>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<menu>
+					<li>
+						<a href="index.html">Introduction to HTML</a>
+					</li>
+					<li>
+						<a href="text-fundamental.html">Text Fundamental</a>
+					</li>
+					<li>
+						<a href="metadata.html">Metadata</a>
+					</li>
+					<li>
+						<a href="hyperlinks.html">Hyperlinks</a>
+					</li>
+				</menu>
+			</nav>
+		</header>
+
+		<h1>Hyperlinks</h1>
+		<p>Hyperlinks allows us to link document to documentm or resources.</p>
+		<p>A URL link can point to HTML file, text file, images, audio video.</p>
+
+		<h2>Anatomy of a link</h2>
+		<p>
+			A basic hyperlink is created using &lt;a&gt; tag, passing the url to the
+			href attritbute.
+		</p>
+		<p>
+			I'm creating a link to
+			<a href="https://www.mozilla.org/en-US/">the Mozilla homepage</a>.
+		</p>
+
+		<h2>Block level links</h2>
+		<p>
+			Any content can be converted into block level link by wrapping block level
+			element within &lt;a&gt; tag.
+		</p>
+		<a href="https://developer.mozilla.org/en-US/">
+			<h1>MDN Web Docs</h1>
+		</a>
+		<p>
+			Documenting web technologies, including CSS, HTML, and JavaScript, since
+			2005.
+		</p>
+
+		<h2>Image links</h2>
+		<p>
+			Image can be also converted into links by wrapping image element within
+			&lt;a&gt; tag.
+		</p>
+		<a href="https://developer.mozilla.org/en-US/">
+			<img
+				src="../../getting-started/web-projects/test-site/images/firefox-icon.png"
+				alt="MDN Web Docs"
+			/>
+		</a>
+
+		<p>
+			We can also pass title attritbute to the &lt;a&gt; tag which shows up when
+			hovered. It only rely on mouse hover not in screen reader, touchscreens
+			etc.
+		</p>
+		<p>
+			I'm creating a link to
+			<a
+				href="https://www.mozilla.org/en-US/"
+				title="The best place to find more information about Mozilla's
+              mission and how to contribute"
+			>
+				the Mozilla homepage</a
+			>.
+		</p>
+
+		<h2>Document fragments</h2>
+		<p>
+			Specific part of HTML document is known as
+			<strong>document fragments</strong> and it is possible to link the
+			specific part of document with the help of id.
+		</p>
+
+		<p>
+			Want to read about lists in Text Fundamentals
+			<a href="text-fundamental.html#lists"> Check here</a>.
+		</p>
+
+		<h2>Absolute versus relative URLs</h2>
+		<p>
+			<strong>Absolute URLs</strong> always points to exactly same location on
+			web.
+		</p>
+		<p>
+			<strong>Relative URLs</strong> always points to location relative to the
+			current page.
+		</p>
+
+		<h2>Non HTML resources</h2>
+		<p>
+			When using the links that can downlaod files,pdf etc we can use downlaod
+			attribute to give the default save filename
+		</p>
+		<a
+			href="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=en-US"
+			download="firefox-latest-64bit-installer.exe"
+		>
+			Download Latest Firefox for Windows (64-bit) (English, US)
+		</a>
+		<h2>Email links</h2>
+		<p>
+			We can create outgoig mail link using &lt;a&gt; tag and 'mailto' url
+			scheme.
+		</p>
+		<a href="mailto:nowhere@mozilla.org">Send email to nowhere</a>
+		<p>We can specify more details in mail header like subject, cc and body.</p>
+		<a
+			href="mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&bcc=name3@rapidtables.com&subject=The%20subject%20of%20the%20email&body=The%20body%20of%20the%20email"
+		>
+			Send mail with cc, bcc, subject and body
+		</a>
+	</body>
+</html>
