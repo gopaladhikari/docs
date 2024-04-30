@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document and Web Structure</title>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<menu>
+					<li>
+						<a href="index.html">Introduction to HTML</a>
+					</li>
+					<li>
+						<a href="text-fundamental.html">Text Fundamental</a>
+					</li>
+					<li>
+						<a href="metadata.html">Metadata</a>
+					</li>
+					<li>
+						<a href="hyperlinks.html">Hyperlinks</a>
+					</li>
+					<li>
+						<a href="advanced-text-formatting.html"
+							>Advanced Text Formatting
+						</a>
+					</li>
+					<li>
+						<a href="document-and-web-structure.html"
+							>Document and Web Structure
+						</a>
+					</li>
+				</menu>
+			</nav>
+		</header>
+
+		<h1>Document and website structure</h1>
+		<p>
+			We should define the individual part of the page using we need to plan a
+			basic website structure and the write html to represent the structure.
+		</p>
+
+		<hr />
+		<h2>Basic sections of a document</h2>
+		<p>
+			Webpages intended to shared standard structure unless the page is
+			displaying some art such as audio, video or games.
+		</p>
+
+		<dl>
+			<dt>header:</dt>
+			<dd>
+				Usually a big strip across the top with a big heading, logo, and perhaps
+				a tagline. This usually stays the same from one webpage to another.
+			</dd>
+
+			<dt>navigation bar:</dt>
+			<dd>
+				Links to the pages within the same website are usually represented by
+				menu, link, button or tabs. So it is very important part of the website,
+				having inconsistent navigation bar will lead to confusion and
+				frustration to user. Many web designer consider navigation bar as the
+				part of the header but it is not required.
+			</dd>
+
+			<dt>main content:</dt>
+			<dd>
+				This is the main area of the webpage that contains the most of the
+				contents, for example video, or the main story , or the map, news
+				headline etc.
+			</dd>
+
+			<dt>sidebar:</dt>
+			<dd>
+				In some the webpages sidebar may contain secondary navigation bar. In
+				some the news article where the main content is in main content, author
+				bio can be in sidebar.
+			</dd>
+
+			<dt>footer:</dt>
+			<dd>
+				It is generally located in the buttom of the webpage and contains
+				copyright notices, contact info, which is generally not critical. The
+				footer is also important for the seo propose.
+			</dd>
+		</dl>
+
+		<hr />
+		<h2>HTML for structuring content</h2>
+		<p>
+			Visual don't tell the whole story. We need to respect semantics and
+			<strong>use the right element for the right job. </strong>
+		</p>
+		<p>
+			To implement such semantic mark up, HTML provides dedicated tags that you
+			can use to represent such sections, for example:
+		</p>
+
+		<ul>
+			<li>header <code>&lt;header&gt;</code></li>
+			<li>navigation <code>&lt;nav&gt;</code></li>
+			<li>footer <code>&lt;footer&gt;</code></li>
+			<li>sidebar <code>&lt;aside&gt;</code></li>
+			<li>main <code>&lt;main&gt;</code></li>
+		</ul>
+		<hr />
+		<h2>HTML layout elements in more detail</h2>
+		<p>Main defination of some of the html tags are</p>
+		<ul>
+			<li>
+				<code>&lt;header&gt;</code> contains the introductory content. If it is
+				used in the <code>&lt;body&gt;</code> it's a global header, if it is
+				used in <code> &lt;article&gt; </code> or
+				<code> &lt;section&gt; </code> it defines a specific header for that
+				section.
+			</li>
+
+			<li>
+				<code>&lt;footer&gt;</code> contains the group of end content for a
+				page. Usually it contain copyright notice and contact info.
+			</li>
+
+			<li>
+				<code>&lt;main&gt;</code> contain the unique content for each page. It
+				should be direct child of <code>&lt;body&gt; element </code>
+			</li>
+
+			<li>
+				<code>&lt;article&gt;</code> is used for the related content still that
+				make in it's own without the rest of the page (e.g., a single blog
+				post).
+			</li>
+
+			<li>
+				<code>&lt;section&gt;</code> is used for grouping together different
+				part of page to form a signle page. <code>&lt;section&gt;</code> can be
+				breaked into different <code>&lt;article&gt;</code> and
+				<code>&lt;article&gt;</code> can be breaked into different
+				<code>&lt;section&gt;</code> depending on the content.
+			</li>
+
+			<li>
+				<code>&lt;aside&gt;</code> is not directly related to main content but
+				can provide extra information indrectly.
+			</li>
+
+			<li>
+				<code>&lt;nav&gt;</code> contains the main navigation functionality for
+				the page. Secondary links, etc., would not go in the navigation.
+			</li>
+		</ul>
+
+		<h3>Non-semantic wrappers</h3>
+		<p>
+			Sometimes we just need a wrappers that don't have semantic meaning, just
+			for css or javascript to use. For this we have the
+			<code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> element
+		</p>
+
+		<p>
+			<code>&lt;span&gt;</code> is inline non-semantic element which should only
+			be used if we don't want to add any semantic meaning to the content. For
+			example
+		</p>
+		<p>
+			The King walked drunkenly back to his room at 01:00, the beer doing
+			nothing to aid him as he staggered through the door.
+			<span class="editor-note">
+				[Editor's note: At this point in the play, the lights should be down
+				low].
+			</span>
+		</p>
+
+		<code>&lt;div&gt;</code> is block non-semantic element which should only be
+		used if we don't want to add any semantic meaning to the content.For example
+		<div class="shopping-cart">
+			<header>
+				<h3>Shopping cart</h3>
+			</header>
+			<ul>
+				<li>
+					<p>
+						<a href=""><strong>Silver earrings</strong></a
+						>: $99.95.
+					</p>
+					<img src="../products/3333-0985/thumb.png" alt="Silver earrings" />
+				</li>
+				<li>…</li>
+			</ul>
+			<p>Total cost: $237.89</p>
+		</div>
+
+		<hr />
+		<h2>Line breaks and horizontal rules</h2>
+		<p>
+			We can use <code>&lt;br&gt;</code> and <code>&lt;hr&gt;</code> to add
+			break or horizontal line.
+		</p>
+
+		<h3><code>&lt;br&gt;</code> the line break element</h3>
+		<p>
+			It creates a line break in a paragraph. In can be used in peom, address
+			etc. For example
+		</p>
+		<p>
+			There once was a man named O'Dell<br />
+			Who loved to write HTML<br />
+			But his structure was bad, his semantics were sad<br />
+			and his markup didn't read very well.
+		</p>
+		<h3><code>&lt;hr&gt;</code> the thematic break element</h3>
+		<p>
+			It created horizontal rule in the document that denotes a thematic change
+			in the text (such as change in scene or topic ). Visually it looks like a
+			horizontal line. For example
+		</p>
+		<p>
+			Ron was backed into a corner by the marauding netherbeasts. Scared, but
+			determined to protect his friends, he raised his wand and prepared to do
+			battle, hoping that his distress call had made it through.
+		</p>
+		<hr />
+		<p>
+			Meanwhile, Harry was sitting at home, staring at his royalty statement and
+			pondering when the next spin off series would come out, when an enchanted
+			distress letter flew through his window and landed in his lap. He read it
+			hazily and sighed; "better get back to work then", he mused.
+		</p>
+
+		<h2>Planning a simple website</h2>
+		<p>
+			We should plan the structure of the website, what content should put on,
+			what pages are needed etc.
+		</p>
+
+		<ol>
+			<li>
+				To figure out the common elements in most of the pages such as header,
+				footer etc.
+			</li>
+			<li>Draw the rough sketch of sructure of the website.</li>
+			<li>Think about all other non common content of the website.</li>
+			<li>
+				Sort all these non common into groups, this gives idea what might be
+				similar in different pages.
+			</li>
+
+			<li>
+				Now try to sketch a rough sitemap to show the web flow of the website
+				including notes about appearance if required. The homepage will probably
+				be in the center, and link to most if not all of the others; most of the
+				pages in a small site should be available from the main navigation,
+				although there are exceptions.
+			</li>
+		</ol>
+	</body>
+</html>
