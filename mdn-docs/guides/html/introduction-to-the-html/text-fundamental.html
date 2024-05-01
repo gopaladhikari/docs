@@ -31,185 +31,191 @@
 							>Document and Web Structure
 						</a>
 					</li>
+					<li>
+						<a href="debuggin-the-html.html"> Debugging the HTML </a>
+					</li>
 				</menu>
 			</nav>
 		</header>
+		<main>
+			<h1>I am the title of the story.</h1>
 
-		<h1>I am the title of the story.</h1>
+			<p>I am a paragraph, oh yes I am.</p>
 
-		<p>I am a paragraph, oh yes I am.</p>
+			<!-- Headings -->
 
-		<!-- Headings -->
+			<h1>The Gopal Adhikari Story</h1>
 
-		<h1>The Gopal Adhikari Story</h1>
+			<p>By gopaladhikari</p>
 
-		<p>By gopaladhikari</p>
+			<h2>Chapter 1: The dark night</h2>
 
-		<h2>Chapter 1: The dark night</h2>
+			<p>
+				It was a dark night. Somewhere, an owl hooted. The rain lashed down on
+				the…
+			</p>
 
-		<p>
-			It was a dark night. Somewhere, an owl hooted. The rain lashed down on
-			the…
-		</p>
+			<h2>Chapter 2: The eternal silence</h2>
 
-		<h2>Chapter 2: The eternal silence</h2>
+			<p>
+				Our protagonist could not so much as a whisper out of the shadowy
+				figure…
+			</p>
 
-		<p>
-			Our protagonist could not so much as a whisper out of the shadowy figure…
-		</p>
+			<h3>The specter speaks</h3>
 
-		<h3>The specter speaks</h3>
+			<p>
+				Several more hours had passed, when all of a sudden the specter sat bolt
+				upright and exclaimed, "Please have mercy on my soul!"
+			</p>
 
-		<p>
-			Several more hours had passed, when all of a sudden the specter sat bolt
-			upright and exclaimed, "Please have mercy on my soul!"
-		</p>
+			<h2>Why do we need structure?</h2>
 
-		<h2>Why do we need structure?</h2>
+			<p>We can make any element into a heading size using css</p>
 
-		<p>We can make any element into a heading size using css</p>
+			<p>
+				To answer this question, let's take a look at
+				<a href="text-fundamentals/text-start.html"> text-start.html</a>. They
+				aren't marked in any way. This way text appear in a single big chunck.
+			</p>
 
-		<p>
-			To answer this question, let's take a look at
-			<a href="text-fundamentals/text-start.html"> text-start.html</a>. They
-			aren't marked in any way. This way text appear in a single big chunck.
-		</p>
+			<h2>Why do we need semantics?</h2>
+			<p>
+				Semantic value will be used in multiple ways, for example by search
+				engines and screen readers
+			</p>
+			<p>
+				On the other hand, you could make any element look like a top level
+				heading. Consider the following:
+			</p>
+			<span style="font-size: 32px; margin: 21px 0; display: block">
+				Is this a top level heading?
+			</span>
 
-		<h2>Why do we need semantics?</h2>
-		<p>
-			Semantic value will be used in multiple ways, for example by search
-			engines and screen readers
-		</p>
-		<p>
-			On the other hand, you could make any element look like a top level
-			heading. Consider the following:
-		</p>
-		<span style="font-size: 32px; margin: 21px 0; display: block">
-			Is this a top level heading?
-		</span>
+			This is a &lt;span&gt; element. It has no semantics.
 
-		This is a &lt;span&gt; element. It has no semantics.
+			<h2 id="lists">Lists</h2>
+			<p>
+				List are everywhere for example, shopping list,todo list, direction to
+				house etc.
+			</p>
 
-		<h2 id="lists">Lists</h2>
-		<p>
-			List are everywhere for example, shopping list,todo list, direction to
-			house etc.
-		</p>
+			<p>
+				There are three types of three types of lists: unordered, ordered, and
+				description.
+			</p>
+			<h3 id="unordered">Unordered</h3>
+			<p>
+				Unordered lists are used to mark up lists of items for which the order
+				of the items doesn't matter. Let's take a shopping list as an example:
+			</p>
+			<p>
+				Unordered list starts with &lt;ul&gt; which warps around list items i.e
+				&lt;li&gt.
+			</p>
+			<ul>
+				<li>milk</li>
+				<li>eggs</li>
+				<li>bread</li>
+				<li>hummus</li>
+			</ul>
 
-		<p>
-			There are three types of three types of lists: unordered, ordered, and
-			description.
-		</p>
-		<h3 id="unordered">Unordered</h3>
-		<p>
-			Unordered lists are used to mark up lists of items for which the order of
-			the items doesn't matter. Let's take a shopping list as an example:
-		</p>
-		<p>
-			Unordered list starts with &lt;ul&gt; which warps around list items i.e
-			&lt;li&gt.
-		</p>
-		<ul>
-			<li>milk</li>
-			<li>eggs</li>
-			<li>bread</li>
-			<li>hummus</li>
-		</ul>
+			<h3 id="ordered">Ordered</h3>
+			<p>
+				Ordered lists are lists in which the order of the items does matter.
+				Let's take a set of directions as an example
+			</p>
+			<p>
+				Ordered list starts with &lt;ul&gt; which warps around list items i.e
+				&lt;li&gt.
+			</p>
+			<ol>
+				<li>Drive to the end of the road</li>
+				<li>Turn right</li>
+				<li>Go straight across the first two roundabouts</li>
+				<li>Turn left at the third roundabout</li>
+				<li>The school is on your right, 300 meters up the road</li>
+			</ol>
 
-		<h3 id="ordered">Ordered</h3>
-		<p>
-			Ordered lists are lists in which the order of the items does matter. Let's
-			take a set of directions as an example
-		</p>
-		<p>
-			Ordered list starts with &lt;ul&gt; which warps around list items i.e
-			&lt;li&gt.
-		</p>
-		<ol>
-			<li>Drive to the end of the road</li>
-			<li>Turn right</li>
-			<li>Go straight across the first two roundabouts</li>
-			<li>Turn left at the third roundabout</li>
-			<li>The school is on your right, 300 meters up the road</li>
-		</ol>
+			<h3>Nesting list</h3>
+			<p>
+				Its okay to nest one list inside another.Let's take the second list from
+				our recipe example:
+			</p>
+			<ol>
+				<li>Remove the skin from the garlic, and chop coarsely.</li>
+				<li>
+					Remove all the seeds and stalk from the pepper, and chop coarsely.
+				</li>
+				<li>Add all the ingredients into a food processor.</li>
+				<li>Process all the ingredients into a paste.</li>
+				<li>
+					If you want a coarse "chunky" hummus, process it for a short time.
+				</li>
+				<li>If you want a smooth hummus, process it for a longer time.</li>
+			</ol>
+			<p>
+				Since the last two bullets are very closely related to the one before
+				them,it might make sense to nest them inside their own unordered list
+				and put that list inside the current fourth bullet. This would look like
+				so:
+			</p>
+			<ol>
+				<li>Remove the skin from the garlic, and chop coarsely.</li>
+				<li>
+					Remove all the seeds and stalk from the pepper, and chop coarsely.
+				</li>
+				<li>Add all the ingredients into a food processor.</li>
+				<li>
+					Process all the ingredients into a paste.
+					<ul>
+						<li>
+							If you want a coarse "chunky" hummus, process it for a short time.
+						</li>
+						<li>If you want a smooth hummus, process it for a longer time.</li>
+					</ul>
+				</li>
+			</ol>
 
-		<h3>Nesting list</h3>
-		<p>
-			Its okay to nest one list inside another.Let's take the second list from
-			our recipe example:
-		</p>
-		<ol>
-			<li>Remove the skin from the garlic, and chop coarsely.</li>
-			<li>
-				Remove all the seeds and stalk from the pepper, and chop coarsely.
-			</li>
-			<li>Add all the ingredients into a food processor.</li>
-			<li>Process all the ingredients into a paste.</li>
-			<li>
-				If you want a coarse "chunky" hummus, process it for a short time.
-			</li>
-			<li>If you want a smooth hummus, process it for a longer time.</li>
-		</ol>
-		<p>
-			Since the last two bullets are very closely related to the one before
-			them,it might make sense to nest them inside their own unordered list and
-			put that list inside the current fourth bullet. This would look like so:
-		</p>
-		<ol>
-			<li>Remove the skin from the garlic, and chop coarsely.</li>
-			<li>
-				Remove all the seeds and stalk from the pepper, and chop coarsely.
-			</li>
-			<li>Add all the ingredients into a food processor.</li>
-			<li>
-				Process all the ingredients into a paste.
-				<ul>
-					<li>
-						If you want a coarse "chunky" hummus, process it for a short time.
-					</li>
-					<li>If you want a smooth hummus, process it for a longer time.</li>
-				</ul>
-			</li>
-		</ol>
+			<em
+				>So we need semantic to give the actual meaning to the content.
+				<a href="text-fundamentals/text-completed.html">Here</a> is semantic
+				version of
+				<a href="text-fundamentals/text-start.html"> text-started.html </a>
+			</em>
 
-		<em
-			>So we need semantic to give the actual meaning to the content.
-			<a href="text-fundamentals/text-completed.html">Here</a> is semantic
-			version of
-			<a href="text-fundamentals/text-start.html"> text-started.html </a>
-		</em>
+			<h2>Emphasis and importance</h2>
+			<p>
+				We would want to mark certain words as important or something different.
+				HTML provides the &lt;<em>em</em>&gt; and
+				&lt;<strong>strong</strong>&gt; tags.
+			</p>
+			<h3>Emphasis</h3>
+			<p>We use the &lt;<em>em</em>&gt; tag to mark up such instance .</p>
+			<p>
+				Browser will render this as <em>emphasis text</em> as an italic text but
+				it shoudn't be used to get italic text. To get italic we can use
+				&lt;i&gt; tag or by adding css.Exmaple of emphasis
+			</p>
+			<p>I am <em>glad</em> you weren't <em>late</em>.</p>
 
-		<h2>Emphasis and importance</h2>
-		<p>
-			We would want to mark certain words as important or something different.
-			HTML provides the &lt;<em>em</em>&gt; and &lt;<strong>strong</strong>&gt;
-			tags.
-		</p>
-		<h3>Emphasis</h3>
-		<p>We use the &lt;<em>em</em>&gt; tag to mark up such instance .</p>
-		<p>
-			Browser will render this as <em>emphasis text</em> as an italic text but
-			it shoudn't be used to get italic text. To get italic we can use &lt;i&gt;
-			tag or by adding css.Exmaple of emphasis
-		</p>
-		<p>I am <em>glad</em> you weren't <em>late</em>.</p>
+			<h3>Strong importance</h3>
+			<p>
+				To emphasize important word we can bold them using &lt;strong&gt; tag,
+				for example
+			</p>
 
-		<h3>Strong importance</h3>
-		<p>
-			To emphasize important word we can bold them using &lt;strong&gt; tag, for
-			example
-		</p>
+			<ul>
+				<li>This liquid is <strong>highly toxic</strong>.</li>
+				<li>I am counting on you. <strong>Do not</strong> be late!</li>
+			</ul>
 
-		<ul>
-			<li>This liquid is <strong>highly toxic</strong>.</li>
-			<li>I am counting on you. <strong>Do not</strong> be late!</li>
-		</ul>
-
-		<p>We can nest strong and emphasis inside one another if desired:</p>
-		<p>
-			This liquid is <strong>highly toxic</strong> — if you drink it,
-			<strong>you may <em>die</em></strong
-			>.
-		</p>
+			<p>We can nest strong and emphasis inside one another if desired:</p>
+			<p>
+				This liquid is <strong>highly toxic</strong> — if you drink it,
+				<strong>you may <em>die</em></strong
+				>.
+			</p>
+		</main>
 	</body>
 </html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Debugging the HTML</title>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<menu>
+					<li>
+						<a href="index.html">Introduction to HTML</a>
+					</li>
+					<li>
+						<a href="text-fundamental.html">Text Fundamental</a>
+					</li>
+					<li>
+						<a href="metadata.html">Metadata</a>
+					</li>
+					<li>
+						<a href="hyperlinks.html">Hyperlinks</a>
+					</li>
+					<li>
+						<a href="advanced-text-formatting.html"
+							>Advanced Text Formatting
+						</a>
+					</li>
+
+					<li>
+						<a href="document-and-web-structure.html"
+							>Document and Web Structure
+						</a>
+					</li>
+
+					<li>
+						<a href="debuggin-the-html.html"> Debugging the HTML </a>
+					</li>
+				</menu>
+			</nav>
+		</header>
+
+		<main>
+			<h1>Debugging the HTML</h1>
+
+			<p>
+				When something goes wrong, we can't find where the error is because HTML
+				doesn't have errors.
+			</p>
+
+			<hr />
+			<h2>HTML and debugging</h2>
+			<p>
+				HTML is not compiled into different form before the browser parse it. It
+				is interpreted not compiled. HTML code is a lot more
+				<strong>permissive</strong> than how a programming language is run.
+			</p>
+
+			<h3>Permissive code</h3>
+			<p>
+				When there is error is code, there are generally two type of error, i. e
+				syntax error and logical error.
+			</p>
+			<dl>
+				<dt><strong>Syntax error</strong></dt>
+				<dd>These are usually spelling mistake in the code.</dd>
+				<br />
+				<dt><strong>Logical error</strong></dt>
+				<dd>
+					These are error when the syntax is actually correct but the code
+					doesn't behave as expected, meaninig the code runs incorrectly. These
+					error ususally hard to detect because their is no any error message to
+					direct to error cause.
+				</dd>
+			</dl>
+
+			<p>
+				HTML doesn't occur the syntax error because browser have built-in rules
+				to state how to interpret the incorrectly written markup code, so there
+				will be something running, even if it is not expected. This can still be
+				a problem. HTML is parsed permissively because when the web was first
+				created, it was decided that allowing people to get their content
+				published was more important than the syntax was absolutely correct.
+			</p>
+
+			<h3>Active learning: Studying permissive code</h3>
+			<p>Now let's see how to study permissive nature of code.</p>
+			<ol>
+				<li>
+					In
+					<a href="debugging-the-html/debug-demo.html" target="_blank">
+						debug-demo.html</a
+					>
+					the written code is badly formatted. They are some built-in errors in
+					the html code.
+				</li>
+
+				<li>Open above link the browser</li>
+				<li>
+					This doesn't look greate because the source code is not well
+					formatted.
+				</li>
+				<li>
+					Code errors
+					<ul>
+						<li>
+							The <code>&lt;p&gt;</code> element and
+							<code>&lt;ul&gt;</code> element doesn't have proper closing tag.
+						</li>
+						<li>
+							The first <code>&lt;strong&gt;</code> element has no closing tag
+						</li>
+						<li>The <code>&lt;section&gt;</code> element is badly nested.</li>
+						<li>
+							The <code>href</code> attribute of <code>&lt;a&gt;</code> element
+							has not closing double quote. Some weird name is displaying
+							instead of the right name.
+						</li>
+					</ul>
+				</li>
+
+				<li>
+					The browser has tried to fixed fix our HTML error. Checking the code
+					using DOM inspectator we get
+					<ul>
+						<li>
+							The <code>&lt;p&gt;</code> and <code>&lt;ul&gt;</code> has the
+							closing tag.
+						</li>
+						<li>
+							The <code> &lt;strong&gt; </code> element has the closing tag.
+						</li>
+						<li>
+							The incorrectly nesting of <code>&lt;section&gt;</code> element
+							has been fixed.
+						</li>
+						<li>
+							The <code>href</code> attribute of <code>&lt;a&gt;</code> element
+							has not yet being fixed. Closing double quote is still missing.
+						</li>
+					</ul>
+				</li>
+			</ol>
+			<p>
+				<strong>NOTE: </strong> well formatted code for
+				<a href="debugging-the-html/debug-demo.html">debug-demo.html</a> can be
+				found <a href="debugging-the-html/debug-demo-fixed.html">here.</a>
+			</p>
+
+			<h3>HTML validation</h3>
+			<p>
+				So we need really well formatted html. So the best strategy to check the
+				error in HTML is running code in
+				<a href="https://validator.w3.org/" target="_blank">HTML validator</a>,
+				we can provide the web address, html file or directly code.
+			</p>
+
+			<h3>Interpreting the error message</h3>
+			<p>
+				Error messages are ususally helpfull. Lets break download the error of
+				<a href="debugging-the-html/debug-demo.html">debug-demo.html</a> in
+				<a href="debugging-the-html/debug-demo.html">debug-demo.html</a>, we get
+				the following errors.
+			</p>
+			<ul>
+				<li>
+					<strong
+						>End tag li implied, but there were open elements (2
+						instances):</strong
+					>
+					this message indicated the <code>&lt;li&gt;</code> element is opened
+					and not closed. It should be closed.
+				</li>
+				<li>
+					<strong>Unclosed element <code> &lt;strong&gt;</code></strong>
+					this message indicated the <code>&lt;strong&gt;</code> element is
+					opened and not closed. It should be closed.
+				</li>
+
+				<li>
+					<strong>
+						End tag <code> &lt;strong&gt;</code> violates nesting rules.
+					</strong>
+					this points out the incorrectly nested element.
+				</li>
+
+				<li>
+					<strong>
+						End of file reached when inside an attribute value. Ignoring tag.
+					</strong>
+					this indicated that there is attribute value is upto the end of file
+					because it is not closed.
+				</li>
+				<li>
+					<strong>End of file seen and there were open elements. </strong>
+					this indicated that there are opened element that should be properly
+					closed. An attribute missing a closing quote can result in an open
+					element because the rest of the document is interpreted as the
+					attribute's content.
+				</li>
+				<li>
+					<strong>Unclosed element <code> &lt;ul&gt;</code>. </strong>
+					this indicated that there is an unclosed <code>&lt;ul&gt;</code> but
+					this is not helpful because there is closing tag. This is because the
+					missing double quote in <code>href</code> attribute of
+					<code>&lt;a&gt;</code> element.
+				</li>
+			</ul>
+
+			<p>
+				Sometimes fixing an earlier error will also get rid of other error
+				messages — several errors can often be caused by a single problem, in a
+				domino effect.
+			</p>
+		</main>
+	</body>
+</html>
