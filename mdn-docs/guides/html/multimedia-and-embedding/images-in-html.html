@@ -36,6 +36,249 @@
 		<main>
 			<article>
 				<h1>Images in HTML</h1>
+				<p>
+					Web without images are really boring. Here we are going to learn how
+					to use images in HTML
+				</p>
+				<hr />
+				<h2>How do we put an image on a webpage?</h2>
+				<p>
+					To put image in web page we use &lt;img&gt; tag. The &lt;img&gt; tag
+					is a void element, which means it doesn't have any children and end
+					tag. We use src attribute to specify the source of the image.
+				</p>
+				<img src="images/dinosaur.png" alt="alt text" />
+
+				<p>
+					Search engines also counts filename towards SEO. Therefore we should
+					give proper filename to the image, <code>html.jpg</code> is better
+					name than <code>img123.jpg</code>
+				</p>
+
+				<p>
+					You could also embed the image using its absolute URL, for example:
+				</p>
+
+				<img
+					src="images/dinosaur.png"
+					alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"
+					width="400"
+					height="341"
+					title="A T-Rex on display in the Manchester University Museum"
+				/>
+
+				<p>
+					Linking through absolute url is not recommended because when changing
+					the domain, we need to update each image link.
+				</p>
+
+				<p>
+					Pointing the src attribute to an image in someone else hosted website
+					is hotlinking. It is considered a unehtical because someone else is
+					paying for bandwidth.
+				</p>
+				<hr />
+				<h2>Alternative text</h2>
+				<p>
+					It is the textual description of the image. If the image is not able
+					to load.
+				</p>
+				<img
+					src="images/dinosaur.jpg"
+					alt="The head and torso of a dinosaur skeleton;
+          it has a large head with long sharp teeth"
+				/>
+
+				<p>The reason we need a alt text are</p>
+				<ul>
+					<li>It is used to describe the screen reader.</li>
+					<li>Spelling of the filename or path can be wrong.</li>
+					<li>
+						Some people still use the text only browser such as lynx which
+						doesn't support images.
+					</li>
+					<li>
+						It helps for SEO, for example search engines can match alt text with
+						search queries.
+					</li>
+				</ul>
+				<hr />
+				<h2>Width and height</h2>
+				<p>
+					We can also specify the width and height of the image using the
+					<code>width</code> and <code>height</code> attributes. They are
+					integer wihout unit and are represented in pixels.
+				</p>
+				<img
+					src="images/dinosaur.png"
+					alt="The head and torso of a dinosaur skeleton;
+          it has a large head with long sharp teeth"
+					width="400"
+					height="341"
+				/>
+
+				<p>
+					As soon as the image loads, it will be displayed in the browser. But
+					sometimes the HTML is received but images will take time to load. But
+					when the images are loaded the image is displayed in this case browser
+					has to move the text dowm which is very distracting to the user if
+					they started to read the content. So providing the height and width is
+					very important. Browser knows how much space should be left to fit the
+					image and when recieved the image it displayed it, without moving the
+					text down.
+				</p>
+
+				<hr />
+				<h2>Image titles</h2>
+				<p>
+					As link we can also add titles to the image to support screen reader
+					and providing futher information the user.
+				</p>
+				<img
+					src="images/dinosaur.png"
+					alt="The head and torso of a dinosaur skeleton;
+          it has a large head with long sharp teeth"
+					width="400"
+					height="341"
+					title="A T-Rex on display in the Manchester University Museum"
+				/>
+
+				<img
+					src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"
+					alt="dinosaur in the Museum"
+					width="200"
+					height="171"
+				/>
+
+				<hr />
+				<h2>Media assets and licensing</h2>
+				<p>
+					Images and other assets comes with different licenses. We can't just
+					use the random image found over the internet. Let's understand the
+					<strong>licensing types</strong>
+				</p>
+				<h3>All rights reserved</h3>
+				<p>
+					Sometimes creater of the original work such as songs, books or image
+					release their work under closest copyright licenses. It means only the
+					creator or pubisher have the right to use or distribute it. We need
+					any one of following permission to use it.
+				</p>
+				<ul>
+					<li>Written permission by the creator or publisher.</li>
+					<li>Pay the license fee.</li>
+					<li>
+						Limit the use of those work may be considered as
+						<a
+							href="https://fairuse.stanford.edu/overview/fair-use/what-is-fair-use/"
+							target="_blank"
+						>
+							<strong>fair use</strong>
+						</a>
+					</li>
+				</ul>
+
+				<p>
+					Author are not required to include copyright license term with their
+					work. Copyright automatically exist in original work once it is in
+					tangible medium. So if there is an image in the internet the safest
+					assumption is to consider it under
+					<strong>all rights reserved</strong>.
+				</p>
+
+				<h3>Permissive</h3>
+				<p>
+					Some images are released under permissive license such as
+					<a href="https://mit-license.org/"><strong>MIT</strong></a
+					>,
+					<a href="https://opensource.org/license/BSD-3-clause"
+						><strong>BSD</strong></a
+					>
+					or
+					<a href="https://chooser-beta.creativecommons.org/"
+						><strong>Creative Commons (CC) license</strong></a
+					>, where we do not need a pay or seek the permission to use it, still
+					there are some licensing to fulfill such as
+				</p>
+				<ul>
+					<li>
+						Provide a link to the original source of the image and credit its
+						creator.
+					</li>
+					<li>Indicate whether any changes were made to it.</li>
+					<li>Not use the image in any commercial work.</li>
+					<li>
+						Include a copy of the license along with any release that uses the
+						image.
+					</li>
+					<li>
+						Share any derivative works created using the image under the same
+						license as the original.
+					</li>
+				</ul>
+
+				<p>
+					Sometimes we may hear about <strong>copyleft</strong> in permissive
+					licenses. Copyleft licenses such as
+					<a href="https://www.gnu.org/licenses/gpl-3.0.en.html">
+						<strong>GNU General Public License (GPL)</strong>
+					</a>
+					demands that derivates need to be released under same licenses as
+					original.
+				</p>
+
+				<p>
+					New project built with the code of a
+					<strong>copyleft-licensed</strong> which is also know as "fork", will
+					need under the license of same licensed.
+				</p>
+
+				<h3>Public domain/CC0</h3>
+				<p>
+					Work under the public domain are often refer as "no right reserved",
+					no copyright applies to it and can be used without permission.
+				</p>
+
+				<hr />
+				<h2>Annotating images with figures and figure captions</h2>
+
+				<p>Their are number of ways to add caption to the image, for example</p>
+				<div class="figure">
+					<img
+						src="images/dinosaur.png"
+						alt="The head and torso of a dinosaur skeleton;
+										it has a large head with long sharp teeth"
+						width="400"
+						height="341"
+					/>
+
+					<p>A T-Rex on display in the Manchester University Museum.</p>
+				</div>
+				<p>
+					This is okay but styled ina good way but it doesn't semantically links
+					the image to the capiton. So we can use html <code> figure </code> and
+					<code> figcaption </code> elements. Which was created to provide
+					semantic container for figures, and clearly links figure to caption.
+					for example
+				</p>
+				<figure>
+					<img
+						src="images/dinosaur.png"
+						alt="The head and torso of a dinosaur skeleton;
+										it has a large head with long sharp teeth"
+						width="400"
+						height="341"
+					/>
+
+					<figcaption>
+						A T-Rex on display in the Manchester University Museum.
+					</figcaption>
+				</figure>
+
+				<p>
+					A figure could be several images, a code snippet, audio, video,
+					equations, a table, or something else.
+				</p>
 			</article>
 		</main>
 	</body>
