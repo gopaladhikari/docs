@@ -35,6 +35,147 @@
 		</header>
 		<main>
 			<h1>Video and Audio</h1>
+			<p>
+				Video and Audio in HTML using <code>&lt;video&gt;</code> and
+				<code>&lt;audio&gt;</code> tag.
+			</p>
+
+			<hr />
+			<h2>The video element</h2>
+			<p>
+				<video src="videos/rabbit320.webm" controls>
+					<p>
+						Your browser doesn't support HTML video. Here is a
+						<a href="videos/rabbit320.webm">link to the video</a> instead.
+					</p>
+				</video>
+			</p>
+
+			<p>The feature notes are</p>
+			<dl>
+				<dt>src</dt>
+				<dd>It contains the path of the video.</dd>
+
+				<dt>controls</dt>
+				<dd>
+					It allows user to control the video, such as play, pause and volume.
+					The paragraph inside the video tag if <strong>fallback text</strong>.
+				</dd>
+			</dl>
+
+			<hr />
+
+			<h2>Using multiple source formats to improve compatibility</h2>
+			<p>
+				They are some broser which doesn't support multiple source formats.
+				There are some ways to prevent this.
+			</p>
+
+			<h3>Contents of a media file</h3>
+			<p>Here is the updated code for above video.</p>
+			<video>
+				<source src="videos/rabbit320.webm" type="video/webm" />
+				<source src="videos/rabbit320.mp4" type="video/mp4" />
+				<p>
+					Your browser doesn't support this video. Here is a
+					<a href="rabbit320.mp4">link to the video</a> instead.
+				</p>
+			</video>
+			<p>
+				This video tag contains a <code>&lt;source&gt;</code> tag which contains
+				src for the original video and type for the format. Type if recommened
+				to use, because some browser can use <code>type</code> to skips
+				immediately when it does't understand it. If <code>type</code> is not
+				included browser will try to load and work, which is unncessary.
+			</p>
+
+			<h3>Other video feature</h3>
+			<video
+				controls
+				width="400"
+				height="400"
+				loop
+				preload="auto"
+				poster="images/poster.png"
+			>
+				<source src="videos/rabbit320.mp4" type="video/mp4" />
+				<source src="videos/rabbit320.webm" type="video/webm" />
+				<p>
+					Your browser doesn't support this video. Here is a
+					<a href="rabbit320.mp4">link to the video</a> instead.
+				</p>
+			</video>
+
+			<hr />
+			<h2>The audio element</h2>
+			<p>Audio works same as video with just some difference.</p>
+
+			<audio controls>
+				<source src="audios/viper.mp3" type="audio/mp3" />
+				<source src="audios/viper.ogg" type="audio/ogg" />
+				<p>
+					Your browser doesn't support this audio file. Here is a
+					<a href="audios/viper.mp3">link to the audio</a> instead.
+				</p>
+			</audio>
+
+			<p>This takes less space than video because there is no video to show.</p>
+			<p>Some differe of the audio and video are</p>
+			<ul>
+				<li>
+					It doesn't suport <code> height </code> and
+					<code> width </code> attribute like video
+				</li>
+
+				<li>It doesn't support poster attribute.</li>
+			</ul>
+			<hr />
+			<h2>Displaying video text tracks</h2>
+			<p>
+				It is very usefull if you want to add captions to your video. It can use
+				useful in many ways
+			</p>
+			<ul>
+				<li>It can help people who is deaf or who doesn't listen clearly.</li>
+				<li>It can help people who are is noisy environment.</li>
+				<li>
+					It can help people who are in environment where playing audio is
+					distracted such as library.
+				</li>
+			</ul>
+
+			<p>Here is the subtitle for the video</p>
+
+			<figure>
+				<video preload="auto" controls>
+					<source src="videos/sintel-short.mp4" type="video/mp4" />
+					<source src="videos/sintel-short.webm" type="video/webm" />
+					<track
+						label="English"
+						kind="subtitles"
+						srclang="en"
+						src="subtitles/sintel-en.vtt"
+						default
+					/>
+					<track
+						label="Deutsch"
+						kind="subtitles"
+						srclang="de"
+						src="subtitles/sintel-de.vtt"
+					/>
+					<track
+						label="Español"
+						kind="subtitles"
+						srclang="es"
+						src="subtitles/sintel-es.vtt"
+					/>
+				</video>
+
+				<figcaption>
+					&copy; copyright Blender Foundation |
+					<a href="http://www.sintel.org">www.sintel.org</a>
+				</figcaption>
+			</figure>
 		</main>
 	</body>
 </html>
