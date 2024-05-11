@@ -3,7 +3,17 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Gopal Adhikari" />
+		<meta
+			name="description"
+			content="Short and sweet introduction of iframe in html"
+		/>
 		<title>iFrame in HTML</title>
+		<style>
+			iframe {
+				border: none;
+			}
+		</style>
 	</head>
 	<body>
 		<header>
@@ -35,7 +45,138 @@
 		</header>
 		<main>
 			<article>
-				<h1>iFrame in HTML</h1>
+				<h1>From object to iframe — other embedding technologies</h1>
+				<p>
+					Here we will learn about, how to use other contents in the webpages.
+					<code>iFrame</code>, <code>object</code> and <code>embed</code> allow
+					us to do that. <code>iFrame</code> is used to embed other wepages in
+					the html whereas <code>object</code> and <code>embed</code> embed the
+					others resources, contents in the html such as pdf..
+				</p>
+
+				<hr />
+				<h2>Active learning: classic embedding uses</h2>
+				<p>Embedding the youtube video in html</p>
+				<iframe
+					width="560"
+					height="315"
+					src="https://www.youtube.com/embed/9UMABb-uQ_E?si=jTIIJYe8U5OAl095"
+					title="YouTube video player"
+					frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					referrerpolicy="strict-origin-when-cross-origin"
+					allowfullscreen
+				></iframe>
+
+				<p>Embedding a google map</p>
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57148.700730977!2d87.46203907127303!3d26.462374980773788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ef7e58a2911917%3A0x245693bf47a14e6!2sRangeli%2056600!5e0!3m2!1sen!2snp!4v1715394960576!5m2!1sen!2snp"
+					width="600"
+					height="450"
+					style="border: 0"
+					allowfullscreen=""
+					loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade"
+				></iframe>
+
+				<hr />
+				<h2>iframes in detail</h2>
+				<p>There are security concern about iFrame too.</p>
+				<iframe
+					src="https://developer.mozilla.org/en-US/docs/Glossary"
+					width="100%"
+					height="500"
+					allowfullscreen
+					sandbox
+				>
+					<p>
+						<a href="/en-US/docs/Glossary">
+							Fallback link for browsers that don't support iframes
+						</a>
+					</p>
+				</iframe>
+
+				<hr />
+				<h2>Security concerns</h2>
+				<p>
+					<code>iFrame</code> are the common target for the hacker to attack.
+					Because of this developer has developed various security mechanism for
+					making <code>iFrame</code> more secure.
+				</p>
+
+				<p>
+					The above MDN website is not embeded but give error because the
+					developer has configure it to not allow.
+				</p>
+
+				<h3>Only embed when necessary</h3>
+				<p>
+					Sometimes it make sense to embed third-project content. A good
+					security rule is
+					<q
+						cite="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies#iframes_in_detail"
+						>You can never be too cautious. If you made it, double-check it
+						anyway. If someone else made it, assume it's dangerous until proven
+						otherwise.</q
+					>
+				</p>
+
+				<p>
+					Besides that we should only use the our own content or the content
+					with written permission.
+				</p>
+
+				<h3>Use HTTPS</h3>
+				<p>
+					HTTPS is the encryption version of HTTP. Website should be served
+					under the HTTPS because
+				</p>
+
+				<ol>
+					<li>
+						HTTPS reduces the chances that remote content has been tampered in
+						transit.
+					</li>
+					<li>
+						HTTPS prevents embedded content from accessing content in your
+						parent document, and vice versa.
+					</li>
+				</ol>
+
+				<p>Many hosting provider offer HTTPS by default.</p>
+
+				<h3>Always use the sandbox attribute</h3>
+				<p>
+					Content that are not sandbox can use Javascript to use controls the
+					webpage therefore we should use sandbox.
+				</p>
+
+				<h3>Configure CSP directives</h3>
+				<p>
+					CPS stands for <strong>content security policy</strong> and provides
+					the sets of HTPP headers designed to improve the security of iFrame.
+					We can use X-Frame-Options header to prevents, this can prevent other
+					websites for embedding the our content.
+				</p>
+
+				<hr />
+				<h2>The embed and object elements</h2>
+				<p>
+					The embed and object elements are used to embed external content such
+					as pdf. However we can link the pdf instead of embeding it.
+				</p>
+
+				<object
+					data="mypdf.pdf"
+					type="application/pdf"
+					width="800"
+					height="1200"
+				>
+					<p>
+						You don't have a PDF plugin, but you can
+						<a href="mypdf.pdf">download the PDF file. </a>
+					</p>
+				</object>
 			</article>
 		</main>
 	</body>
