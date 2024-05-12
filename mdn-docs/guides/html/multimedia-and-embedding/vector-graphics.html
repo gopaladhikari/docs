@@ -2,8 +2,18 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
 		<title>Vectore Graphics</title>
+		<style>
+			body {
+				background: url("fallback.png") no-repeat center;
+				background-image: url("image.svg");
+				background-size: contain;
+			}
+		</style>
 	</head>
 	<body>
 		<header>
@@ -34,7 +44,129 @@
 			</nav>
 		</header>
 		<main>
-			<h1>Vectore Graphics</h1>
+			<article>
+				<h1>Vector Graphics</h1>
+				<p>
+					There are two types of images, <strong>raster images</strong> and
+					<strong>vector images</strong>.
+				</p>
+
+				<ul>
+					<li>
+						<strong>Raster images</strong> are shows exactly where the
+						pixel is placed and what color it is. Such as png, jpeg, gif
+						etc.
+					</li>
+
+					<li>
+						<strong>Vector images</strong> defined using algorithm, a
+						vector image contains the shape and defination that computer
+						can use to work out what the image should look like.
+					</li>
+				</ul>
+
+				<p>We can use SVG and PNG</p>
+
+				<figure>
+					<img src="svg/star.svg" alt="A star svg" />
+					<figcaption>SVG star image</figcaption>
+				</figure>
+
+				<figure>
+					<img src="images/star.png" alt="A star png" />
+					<figcaption>PNG star image</figcaption>
+				</figure>
+
+				<p>
+					The first one is svg and second one is png. They are identical
+					but they are different. When zoom in, the png images gets started
+					to pixelate.
+				</p>
+
+				<hr />
+				<h2>What is SVG ?</h2>
+				<p>
+					SVG is an XML-based language for describing vector images. SVG is
+					for marking up graphics not contents. SVG defines elements for
+					creating basic shapes, like
+					<code>&lt;circle&gt;</code> and <code>&lt;rect&gt;</code> as well
+					<code>&lt;path&gt;</code> and <code>&lt;ploygon&gt;</code> for
+					complex shapes.
+				</p>
+				<p>
+					As a basic example, the following code creates a circle and a
+					rectangle:
+				</p>
+				<svg
+					version="1.1"
+					baseProfile="full"
+					width="300"
+					height="200"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<rect width="100%" height="100%" fill="black" />
+					<circle cx="150" cy="100" r="90" fill="blue" />
+				</svg>
+
+				<p>
+					SVG has some additional advantages besides those described so
+					far:
+				</p>
+
+				<ul>
+					<li>
+						Text in vector images remains accessible (which also benefits
+						your SEO).
+					</li>
+
+					<li>
+						SVGs lend themselves well to styling/scripting, because each
+						component of the image is an element that can be styled via CSS
+						or scripted via JavaScript.
+					</li>
+				</ul>
+
+				<p>
+					So why would anyone want to use raster graphics over SVG? Well,
+					SVG does have some disadvantages:
+				</p>
+				<ul>
+					<li>Complex svg can take significant time in the browser.</li>
+					<li>SVG is harder to create ratser image.</li>
+				</ul>
+
+				<hr />
+				<h2>Adding SVG to your pages</h2>
+				<p>Here we will learn about adding svg in the web page.</p>
+
+				<h3><code>&lt;img&gt;</code> element</h3>
+				<p>
+					To embed the svg in the web page, we can use the
+					<code>&lt;img&gt;</code> element with src pointing to the svg
+					path.
+				</p>
+
+				<p>We can also use svg as background image using css.</p>
+
+				<h3>How to include SVG code inside your HTML</h3>
+				<p>
+					We can also write svg directly in the HTML code. This is called
+					inline svg.
+				</p>
+				<svg width="300" height="200">
+					<rect width="100%" height="100%" fill="green" />
+				</svg>
+
+				<h3>How to embed an SVG with an iframe</h3>
+				<p>We can embed the svg using iframe</p>
+				<iframe src="triangle.svg" width="500" height="500" sandbox>
+					<img
+						src="triangle.png"
+						alt="Triangle with three unequal sides"
+					/>
+				</iframe>
+				<p>Avoid this method.</p>
+			</article>
 		</main>
 	</body>
 </html>
