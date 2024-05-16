@@ -19,352 +19,353 @@
 				</li>
 			</menu>
 		</header>
+		<main>
+			<article>
+				<h1>HTML table basics</h1>
+				<p>
+					This article will help in very basics of table such as rows,
+					cells, heading etc.
+				</p>
 
-		<article>
-			<h1>HTML table basics</h1>
-			<p>
-				This article will help in very basics of table such as rows, cells,
-				heading etc.
-			</p>
+				<hr />
+				<h2>What is a table?</h2>
+				<p>
+					A table is the structured set of data made up of rows and cells (
+					<strong>tablular data</strong> ) that indicate some kind of
+					connection between data, for example person and their age or
+					gender.
+				</p>
 
-			<hr />
-			<h2>What is a table?</h2>
-			<p>
-				A table is the structured set of data made up of rows and cells (
-				<strong>tablular data</strong> ) that indicate some kind of
-				connection between data, for example person and their age or
-				gender.
-			</p>
+				<hr />
+				<h2>How does table works ?</h2>
+				<p>
+					The point of a table is that it is rigid. Information is easily
+					interpreted by making visual associations between row and column
+					headers. When HTML tables are implemented correctly, screen
+					readers can interpreted in easily.
+				</p>
 
-			<hr />
-			<h2>How does table works ?</h2>
-			<p>
-				The point of a table is that it is rigid. Information is easily
-				interpreted by making visual associations between row and column
-				headers. When HTML tables are implemented correctly, screen readers
-				can interpreted in easily.
-			</p>
+				<hr />
+				<h2>Table styling</h2>
+				<p>
+					For the table to be more effected on the web, CSS styling should
+					be provied.
+				</p>
 
-			<hr />
-			<h2>Table styling</h2>
-			<p>
-				For the table to be more effected on the web, CSS styling should be
-				provied.
-			</p>
+				<hr />
+				<h2>When should you NOT use HTML tables?</h2>
+				<p>
+					HTML table should be used for tabular data, this is what they are
+					designed for. A lot of people use HTML table to layout web pages,
+					for example one for header, footer etc. This is common before CSS
+					support across multiple browser.
+				</p>
 
-			<hr />
-			<h2>When should you NOT use HTML tables?</h2>
-			<p>
-				HTML table should be used for tabular data, this is what they are
-				designed for. A lot of people use HTML table to layout web pages,
-				for example one for header, footer etc. This is common before CSS
-				support across multiple browser.
-			</p>
+				<hr />
+				<h2>Creating first table</h2>
 
-			<hr />
-			<h2>Creating first table</h2>
+				<p>
+					For creating first table, we need <code>table</code> and
+					<code>td</code> elements. <code>ts</code> stands for table data.
+				</p>
 
-			<p>
-				For creating first table, we need <code>table</code> and
-				<code>td</code> elements. <code>ts</code> stands for table data.
-			</p>
-
-			<table>
-				<td>Hi, I'm your first cell.</td>
-				<td>I'm your second cell.</td>
-				<td>I'm your third cell.</td>
-				<td>I'm your fourth cell.</td>
-			</table>
-
-			<p>
-				These cells are not placed underneath each other.
-				<code>td</code> create a single cells which creates the first row
-				and for every cell we add it grows longer.
-			</p>
-
-			<p>
-				To stop this <code>td</code> growing longer and starts a new row we
-				need <code> tr </code> element. <code>tr</code> stands for table
-				row.
-			</p>
-
-			<table>
-				<tr>
+				<table>
 					<td>Hi, I'm your first cell.</td>
 					<td>I'm your second cell.</td>
 					<td>I'm your third cell.</td>
 					<td>I'm your fourth cell.</td>
-				</tr>
+				</table>
 
-				<tr>
-					<td>Second row, first cell.</td>
-					<td>Cell 2.</td>
-					<td>Cell 3.</td>
-					<td>Cell 4.</td>
-				</tr>
-			</table>
+				<p>
+					These cells are not placed underneath each other.
+					<code>td</code> create a single cells which creates the first row
+					and for every cell we add it grows longer.
+				</p>
 
-			<hr />
-			<h2>Adding headers with elements</h2>
-			<p>
-				To give the meaning of the table we need header. It goes in the
-				start of the row or column.
-			</p>
-			<table>
-				<tr>
-					<td>&nbsp;</td>
-					<td>Knocky</td>
-					<td>Flor</td>
-					<td>Ella</td>
-					<td>Juan</td>
-				</tr>
-				<tr>
-					<td>Breed</td>
-					<td>Jack Russell</td>
-					<td>Poodle</td>
-					<td>Streetdog</td>
-					<td>Cocker Spaniel</td>
-				</tr>
-				<tr>
-					<td>Age</td>
-					<td>16</td>
-					<td>9</td>
-					<td>10</td>
-					<td>5</td>
-				</tr>
-				<tr>
-					<td>Owner</td>
-					<td>Mother-in-law</td>
-					<td>Me</td>
-					<td>Me</td>
-					<td>Sister-in-law</td>
-				</tr>
-				<tr>
-					<td>Eating Habits</td>
-					<td>Eats everyone's leftovers</td>
-					<td>Nibbles at food</td>
-					<td>Hearty eater</td>
-					<td>Will eat till he explodes</td>
-				</tr>
-			</table>
-			<p>
-				The problem here is that, while you can kind of make out what's
-				going on, it is not as easy to cross reference data as it could be.
-				If the column and row headings stood out in some way, it would be
-				much better.
-			</p>
+				<p>
+					To stop this <code>td</code> growing longer and starts a new row
+					we need <code> tr </code> element. <code>tr</code> stands for
+					table row.
+				</p>
 
-			<hr />
-			<h2>Dogs table</h2>
-			<table>
-				<tr>
-					<td>&nbsp;</td>
-					<td>Knocky</td>
-					<td>Flor</td>
-					<td>Ella</td>
-					<td>Juan</td>
-				</tr>
-				<tr>
-					<td>Breed</td>
-					<td>Jack Russell</td>
-					<td>Poodle</td>
-					<td>Streetdog</td>
-					<td>Cocker Spaniel</td>
-				</tr>
-				<tr>
-					<td>Age</td>
-					<td>16</td>
-					<td>9</td>
-					<td>10</td>
-					<td>5</td>
-				</tr>
-				<tr>
-					<td>Owner</td>
-					<td>Mother-in-law</td>
-					<td>Me</td>
-					<td>Me</td>
-					<td>Sister-in-law</td>
-				</tr>
-				<tr>
-					<td>Eating Habits</td>
-					<td>Eats everyone's leftovers</td>
-					<td>Nibbles at food</td>
-					<td>Hearty eater</td>
-					<td>Will eat till he explodes</td>
-				</tr>
-			</table>
+				<table>
+					<tr>
+						<td>Hi, I'm your first cell.</td>
+						<td>I'm your second cell.</td>
+						<td>I'm your third cell.</td>
+						<td>I'm your fourth cell.</td>
+					</tr>
 
-			<p>
-				To recognize the header as visually and semantically we need
-				<code>th</code> element, which stands for table header.
-			</p>
-			<table>
-				<tr>
-					<td>&nbsp;</td>
-					<th scope="col">Knocky</th>
-					<th scope="col">Flor</th>
-					<th scope="col">Ella</th>
-					<th scope="col">Juan</th>
-				</tr>
-				<tr>
-					<th scope="row">Breed</th>
-					<td>Jack Russell</td>
-					<td>Poodle</td>
-					<td>Streetdog</td>
-					<td>Cocker Spaniel</td>
-				</tr>
-				<tr>
-					<th scope="row">Age</th>
-					<td>16</td>
-					<td>9</td>
-					<td>10</td>
-					<td>5</td>
-				</tr>
-				<tr>
-					<th scope="row">Owner</th>
-					<td>Mother-in-law</td>
-					<td>Me</td>
-					<td>Me</td>
-					<td>Sister-in-law</td>
-				</tr>
-				<tr>
-					<th scope="row">Eating Habits</th>
-					<td>Eats everyone's leftovers</td>
-					<td>Nibbles at food</td>
-					<td>Hearty eater</td>
-					<td>Will eat till he explodes</td>
-				</tr>
-			</table>
-		</article>
+					<tr>
+						<td>Second row, first cell.</td>
+						<td>Cell 2.</td>
+						<td>Cell 3.</td>
+						<td>Cell 4.</td>
+					</tr>
+				</table>
 
-		<hr />
-		<h2>Allowing cells to span multiple rows and columns</h2>
-		<p></p>
-		<table>
-			<tr>
-				<th>Animals</th>
-			</tr>
-			<tr>
-				<th>Hippopotamus</th>
-			</tr>
-			<tr>
-				<th>Horse</th>
-				<td>Mare</td>
-			</tr>
-			<tr>
-				<td>Stallion</td>
-			</tr>
-			<tr>
-				<th>Crocodile</th>
-			</tr>
-			<tr>
-				<th>Chicken</th>
-				<td>Hen</td>
-			</tr>
-			<tr>
-				<td>Rooster</td>
-			</tr>
-		</table>
-		<table>
-			<tr>
-				<th>Data 1</th>
-				<th style="background-color: yellow">Data 2</th>
-			</tr>
-			<tr>
-				<td>Calcutta</td>
-				<td style="background-color: yellow">Orange</td>
-			</tr>
-			<tr>
-				<td>Robots</td>
-				<td style="background-color: yellow">Jazz</td>
-			</tr>
-		</table>
+				<hr />
+				<h2>Adding headers with elements</h2>
+				<p>
+					To give the meaning of the table we need header. It goes in the
+					start of the row or column.
+				</p>
+				<table>
+					<tr>
+						<td>&nbsp;</td>
+						<td>Knocky</td>
+						<td>Flor</td>
+						<td>Ella</td>
+						<td>Juan</td>
+					</tr>
+					<tr>
+						<td>Breed</td>
+						<td>Jack Russell</td>
+						<td>Poodle</td>
+						<td>Streetdog</td>
+						<td>Cocker Spaniel</td>
+					</tr>
+					<tr>
+						<td>Age</td>
+						<td>16</td>
+						<td>9</td>
+						<td>10</td>
+						<td>5</td>
+					</tr>
+					<tr>
+						<td>Owner</td>
+						<td>Mother-in-law</td>
+						<td>Me</td>
+						<td>Me</td>
+						<td>Sister-in-law</td>
+					</tr>
+					<tr>
+						<td>Eating Habits</td>
+						<td>Eats everyone's leftovers</td>
+						<td>Nibbles at food</td>
+						<td>Hearty eater</td>
+						<td>Will eat till he explodes</td>
+					</tr>
+				</table>
+				<p>
+					The problem here is that, while you can kind of make out what's
+					going on, it is not as easy to cross reference data as it could
+					be. If the column and row headings stood out in some way, it
+					would be much better.
+				</p>
 
-		<table>
-			<colgroup>
-				<col style="background-color: yellow" span="2" />
-			</colgroup>
+				<hr />
+				<h2>Dogs table</h2>
+				<table>
+					<tr>
+						<td>&nbsp;</td>
+						<td>Knocky</td>
+						<td>Flor</td>
+						<td>Ella</td>
+						<td>Juan</td>
+					</tr>
+					<tr>
+						<td>Breed</td>
+						<td>Jack Russell</td>
+						<td>Poodle</td>
+						<td>Streetdog</td>
+						<td>Cocker Spaniel</td>
+					</tr>
+					<tr>
+						<td>Age</td>
+						<td>16</td>
+						<td>9</td>
+						<td>10</td>
+						<td>5</td>
+					</tr>
+					<tr>
+						<td>Owner</td>
+						<td>Mother-in-law</td>
+						<td>Me</td>
+						<td>Me</td>
+						<td>Sister-in-law</td>
+					</tr>
+					<tr>
+						<td>Eating Habits</td>
+						<td>Eats everyone's leftovers</td>
+						<td>Nibbles at food</td>
+						<td>Hearty eater</td>
+						<td>Will eat till he explodes</td>
+					</tr>
+				</table>
 
-			<tr>
-				<th>Data 1</th>
-				<th>Data 2</th>
-			</tr>
-			<tr>
-				<td>Calcutta</td>
-				<td>Orange</td>
-			</tr>
-			<tr>
-				<td>Robots</td>
-				<td>Jazz</td>
-			</tr>
-		</table>
+				<p>
+					To recognize the header as visually and semantically we need
+					<code>th</code> element, which stands for table header.
+				</p>
+				<table>
+					<tr>
+						<td>&nbsp;</td>
+						<th scope="col">Knocky</th>
+						<th scope="col">Flor</th>
+						<th scope="col">Ella</th>
+						<th scope="col">Juan</th>
+					</tr>
+					<tr>
+						<th scope="row">Breed</th>
+						<td>Jack Russell</td>
+						<td>Poodle</td>
+						<td>Streetdog</td>
+						<td>Cocker Spaniel</td>
+					</tr>
+					<tr>
+						<th scope="row">Age</th>
+						<td>16</td>
+						<td>9</td>
+						<td>10</td>
+						<td>5</td>
+					</tr>
+					<tr>
+						<th scope="row">Owner</th>
+						<td>Mother-in-law</td>
+						<td>Me</td>
+						<td>Me</td>
+						<td>Sister-in-law</td>
+					</tr>
+					<tr>
+						<th scope="row">Eating Habits</th>
+						<td>Eats everyone's leftovers</td>
+						<td>Nibbles at food</td>
+						<td>Hearty eater</td>
+						<td>Will eat till he explodes</td>
+					</tr>
+				</table>
 
-		<hr />
-		<h2>School time table</h2>
+				<hr />
+				<h2>Allowing cells to span multiple rows and columns</h2>
+				<p></p>
+				<table>
+					<tr>
+						<th>Animals</th>
+					</tr>
+					<tr>
+						<th>Hippopotamus</th>
+					</tr>
+					<tr>
+						<th>Horse</th>
+						<td>Mare</td>
+					</tr>
+					<tr>
+						<td>Stallion</td>
+					</tr>
+					<tr>
+						<th>Crocodile</th>
+					</tr>
+					<tr>
+						<th>Chicken</th>
+						<td>Hen</td>
+					</tr>
+					<tr>
+						<td>Rooster</td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+						<th>Data 1</th>
+						<th style="background-color: yellow">Data 2</th>
+					</tr>
+					<tr>
+						<td>Calcutta</td>
+						<td style="background-color: yellow">Orange</td>
+					</tr>
+					<tr>
+						<td>Robots</td>
+						<td style="background-color: yellow">Jazz</td>
+					</tr>
+				</table>
 
-		<table>
-			<tr>
-				<td></td>
-				<th>Mon</th>
-				<th>Tues</th>
-				<th>Wed</th>
-				<th>Thurs</th>
-				<th>Fri</th>
-				<th>Sat</th>
-				<th>Sun</th>
-			</tr>
+				<table>
+					<colgroup>
+						<col style="background-color: yellow" span="2" />
+					</colgroup>
 
-			<tr>
-				<th>
-					1st <br />
-					period
-				</th>
-				<td>English</td>
-				<td></td>
-				<td></td>
-				<td>German</td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<th>
-					2st <br />
-					period
-				</th>
-				<td>English</td>
-				<td>English</td>
-				<td></td>
-				<td>German</td>
-				<td>Dutch</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<th>
-					3st <br />
-					period
-				</th>
-				<td></td>
-				<td>German</td>
-				<td></td>
-				<td>German</td>
-				<td>Dutch</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<th>
-					4st <br />
-					period
-				</th>
-				<td></td>
-				<td>English</td>
-				<td></td>
-				<td>English</td>
-				<td>Dutch</td>
-				<td></td>
-			</tr>
-		</table>
+					<tr>
+						<th>Data 1</th>
+						<th>Data 2</th>
+					</tr>
+					<tr>
+						<td>Calcutta</td>
+						<td>Orange</td>
+					</tr>
+					<tr>
+						<td>Robots</td>
+						<td>Jazz</td>
+					</tr>
+				</table>
+
+				<hr />
+				<h2>School time table</h2>
+
+				<table>
+					<tr>
+						<td></td>
+						<th>Mon</th>
+						<th>Tues</th>
+						<th>Wed</th>
+						<th>Thurs</th>
+						<th>Fri</th>
+						<th>Sat</th>
+						<th>Sun</th>
+					</tr>
+
+					<tr>
+						<th>
+							1st <br />
+							period
+						</th>
+						<td>English</td>
+						<td></td>
+						<td></td>
+						<td>German</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<th>
+							2st <br />
+							period
+						</th>
+						<td>English</td>
+						<td>English</td>
+						<td></td>
+						<td>German</td>
+						<td>Dutch</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<th>
+							3st <br />
+							period
+						</th>
+						<td></td>
+						<td>German</td>
+						<td></td>
+						<td>German</td>
+						<td>Dutch</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<th>
+							4st <br />
+							period
+						</th>
+						<td></td>
+						<td>English</td>
+						<td></td>
+						<td>English</td>
+						<td>Dutch</td>
+						<td></td>
+					</tr>
+				</table>
+			</article>
+		</main>
 	</body>
 </html>
