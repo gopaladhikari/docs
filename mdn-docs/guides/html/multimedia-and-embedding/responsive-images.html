@@ -2,7 +2,10 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
 		<title>Responsive Images</title>
 	</head>
 	<body>
@@ -34,7 +37,44 @@
 			</nav>
 		</header>
 		<main>
-			<h1>Responsive Images</h1>
+			<article>
+				<h1>Responsive Images</h1>
+				<p>
+					In this article we will learn about the responsive image. If the
+					images works well in mobile, tablet and desktop then we can call
+					it responsive. This also helps to improve the perfomance.
+				</p>
+
+				<hr />
+				<h2>Why responsive images?</h2>
+				<p>
+					The image in desktop version is bigger than the image in mobile
+					or tablet due to difference in screen sizes. So the image looses
+					it details when it is appear in mobile or tablet. Some desktop
+					uses high resolution screens that need larger images to display
+					nicely.
+				</p>
+
+				<p>
+					So the responsive images technique helps to improve the
+					performance and UI image responsive.
+				</p>
+
+				<hr />
+				<h2>How do you create responsive images?</h2>
+				<p>
+					We can provide the srcset and sizes attritube to the image to
+					tell browser to pick the right one.
+				</p>
+
+				<img
+					srcset="elva-fairy-480w.jpg 480w, elva-fairy-800w.jpg 800w"
+					sizes="(max-width: 600px) 480px,
+         800px"
+					src="elva-fairy-800w.jpg"
+					alt="Elva dressed as a fairy"
+				/>
+			</article>
 		</main>
 	</body>
 </html>
