@@ -12,6 +12,14 @@
 - Markup refers to special elements such as <head>,<title>,<body>,<header>,<footer> and many more.
 ```
 
+# Markdown
+
+- Markdown is a lightweight markup language with plain text formatting syntax. Created by **John Gruber** in 2004.
+
+- It can be used to write books, contents of website, documents, notes etc.
+
+- It is easy to write and read with much simpler syntax.
+
 # CSS: Cascading Style Sheets
 
 - CSS is the code that styles the web content. It is not a programming language.
