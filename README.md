@@ -28,7 +28,7 @@
 
 - CSS is selectively used to style HTML elements. For example this CSS selects paragraph text, setting the color to red:
 
-```bash
+```css
 p {
 	color: red;
 }
