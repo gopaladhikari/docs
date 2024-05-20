@@ -24,9 +24,11 @@
 
 - CSS is the code that styles the web content. It is not a programming language.
 
+- There are rules to controls which selector is stronger when there is conflict. These rules are called cascade or specificity.
+
 - CSS is selectively used to style HTML elements. For example this CSS selects paragraph text, setting the color to red:
 
-```css
+```bash
 p {
 	color: red;
 }
