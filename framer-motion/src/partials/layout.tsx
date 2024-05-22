@@ -26,7 +26,7 @@ export function Layout() {
 	return (
 		<>
 			<Header />
-			<main className="p-6 min-h-screen space-y-8 container">
+			<main role="main" className="p-6 min-h-screen space-y-8 container">
 				<Outlet />
 			</main>
 		</>

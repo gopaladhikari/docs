@@ -7,6 +7,12 @@ import { Components } from "../pages/components";
 import { MotionValues } from "../pages/motion-values";
 import { Universal } from "../pages/universal";
 import { Hooks } from "../pages/hooks";
+import { AnimationPractise } from "../practice/animation-practise";
+import ThreeDPractise from "../practice/threeD-practise";
+import { ComponentsPractise } from "../practice/components-practise";
+import { MotionValuesPractise } from "../practice/motion-values-practise";
+import { UniversalPractise } from "../practice/universal-practise";
+import { HooksPractise } from "../practice/hooks-practise";
 
 export const router = createBrowserRouter([
 	{
@@ -14,7 +20,7 @@ export const router = createBrowserRouter([
 		element: <Layout />,
 		children: [
 			{
-				path: "/",
+				path: "",
 				element: <Home />,
 			},
 			{
@@ -22,24 +28,49 @@ export const router = createBrowserRouter([
 				element: <ThreeD />,
 			},
 			{
-				path: "/animation",
+				path: "three-practice",
+				element: <ThreeDPractise />,
+			},
+			{
+				path: "animation",
 				element: <Animation />,
 			},
 			{
-				path: "/components",
+				path: "animation-practise",
+				element: <AnimationPractise />,
+			},
+			{
+				path: "components",
 				element: <Components />,
 			},
 			{
-				path: "/motion-values",
+				path: "components-practise",
+				element: <ComponentsPractise />,
+			},
+			{
+				path: "motion-values",
 				element: <MotionValues />,
 			},
 			{
-				path: "/universal",
+				path: "motion-values-practise",
+				element: <MotionValuesPractise />,
+			},
+
+			{
+				path: "universal",
 				element: <Universal />,
 			},
 			{
-				path: "/hooks",
+				path: "universal-practise",
+				element: <UniversalPractise />,
+			},
+			{
+				path: "hooks",
 				element: <Hooks />,
+			},
+			{
+				path: "hooks-practise",
+				element: <HooksPractise />,
 			},
 		],
 	},
