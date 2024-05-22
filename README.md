@@ -64,3 +64,11 @@ p {
 - TypeScript code is converted into JavaScript code.
 
 - Typescript understand JavaScript which proivdes type inference.
+
+# Framer Motion
+
+- Framer Motion is a library for building animations in React.
+
+- It is based in **Framer**.
+
+- It is a library for building animations in React.
