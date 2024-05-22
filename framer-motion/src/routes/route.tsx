@@ -26,19 +26,19 @@ export const router = createBrowserRouter([
 				element: <Animation />,
 			},
 			{
-				path: "components",
+				path: "/components",
 				element: <Components />,
 			},
 			{
-				path: "motion-values",
+				path: "/motion-values",
 				element: <MotionValues />,
 			},
 			{
-				path: "universal",
+				path: "/universal",
 				element: <Universal />,
 			},
 			{
-				path: "hooks",
+				path: "/hooks",
 				element: <Hooks />,
 			},
 		],
