@@ -1,0 +1,224 @@
+/*  
+* CSS selectors are the first part of a CSS rule. They are used to select elements in the HTML and tells the browser which elements the CSS rule applies to.
+*/
+
+/*  
+* Types of selectors are
+*   1. Type, class, and ID selectors
+*   2. Combinators
+*   3. attribute selector
+*   4. Pseudo-classes and pseudo-elements
+*/
+
+/*  
+
+*  ---------------- Type selectors ----------------
+*
+* Type selectors target an HTML element such as an <h1>:
+*
+*/
+
+h1 {
+	color: red;
+}
+
+/*  
+
+*  ---------------- Class selectors ----------------
+*
+* Class selectors target an element that has a specific value for its class attribute:
+*
+*/
+
+.special {
+	color: red;
+}
+
+/*  
+
+*  ---------------- ID selectors ----------------
+*
+* ID selectors target an element that has a specific value for its id attribute:
+*
+*/
+
+#special {
+	color: red;
+}
+
+/*  
+
+*  ---------------- Combinators ----------------
+*
+* Combinators are used to select elements based on their relationship to other elements. 
+*
+*/
+article > p {
+	color: red;
+}
+
+/*  
+
+* Descendant combinator is used to select an element that is a descendant of another element. It is used to select an element that is a descendant of another element.
+*
+* The descendant combinator is represented by a space character.
+*
+*/
+
+p {
+	color: red;
+}
+
+p span {
+	color: blue;
+}
+
+span {
+	color: blue;
+}
+
+/*  
+
+* Child combinator is used to select an element that is a child of another element. It is used to select an element that is a child of another element.
+*
+* The child combinator is represented by a >.
+*
+*/
+
+p {
+	color: red;
+}
+
+p span {
+	color: blue;
+}
+
+span {
+	color: blue;
+}
+
+/*  
+
+* Adjacent sibling combinator is used to select an element that is an adjacent sibling of another element. It is used to select an element that is an adjacent sibling of another element.
+*
+* The adjacent sibling combinator is represented by a +.
+*
+*/
+
+p {
+	color: red;
+}
+
+p span {
+	color: blue;
+}
+
+span {
+	color: blue;
+}
+
+/*  
+
+* General sibling combinator is used to select an element that is a general sibling of another element. It is used to select an element that is a general sibling of another element.
+*
+* The general sibling combinator is represented by a ~.
+*
+*/
+
+p {
+	color: red;
+}
+
+p span {
+	color: blue;
+}
+
+span {
+	color: blue;
+}
+
+/*  
+
+*  ---------------- Attribute selectors ----------------
+*
+* Attribute selectors target an element that has a certain attribute.
+*
+*/
+
+a[title] {
+	color: red;
+}
+
+/* * Or even make a selection based on the presence of an attribute with a particular value: */
+
+a[href="https://example.com"]
+{
+	color: red;
+}
+
+/*  
+
+*  ---------------- Pseudo-classes and pseudo-elements ----------------
+*
+* Pseudo-classes and pseudo-elements are used to select elements based on the certain state of an element.
+*
+* The most common pseudo-classes are:
+*   1. :link
+*   2. :visited
+*   3. :hover
+*   4. :active
+*   5. :focus
+*   6. :target
+*   7. :lang
+*
+* The most common pseudo-elements are:
+*   1. ::before
+*   2. ::after
+*   3. ::first-letter
+*   4. ::first-line
+*
+*/
+
+a:link {
+	color: red;
+}
+
+a:visited {
+	color: red;
+}
+
+a:hover {
+	color: red;
+}
+
+a:active {
+	color: red;
+}
+
+input:focus {
+	color: blue;
+}
+
+div:target {
+	color: blue;
+}
+
+body:lang(en) {
+	color: blue;
+}
+
+::before {
+	color: blue;
+}
+
+::after {
+	color: green;
+}
+
+::first-letter {
+	color: blue;
+}
+
+::first-line {
+	color: blue;
+}
