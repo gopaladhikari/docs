@@ -1,12 +1,12 @@
-# Basic Syntax
+# 1. Basic Syntax
 
 The Markdown elements outlined in the original design document.
 
-## Overiew
+## 1.1. Overiew
 
 Nearly all applications support markdown original syntax, but there are variation between applications which are listed below wherever possible.
 
-## Line Breaks
+## 1.2. Line Breaks
 
 To create a line break, end a line with two or more spaces, or with a backslash followed by a newline.
 
@@ -14,7 +14,7 @@ To create a line break, end a line with two or more spaces, or with a backslash 
 | ---------------------------------------------------------- | --------------------------------------------------------------- |
 | This is the first line. <br/> And this is the second line. | <p>This is the first line <br> and this is the second line.</p> |
 
-## Blockquotes
+## 1.3. Blockquotes
 
 > Dorothy followed her through many of the beautiful rooms in her castle.
 
@@ -24,22 +24,22 @@ To create a line break, end a line with two or more spaces, or with a backslash 
 >
 > The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with
 
-## Nested Blockquotes
+## 1.4. Nested Blockquotes
 
 > Dorothy followed her through many of the beautiful rooms in her castle.
 >
 > > The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.
 
-## Blockquotes with Other Elements
+## 1.5. Blockquotes with Other Elements
 
-> #### The quarterly results look great!
+> #### The quarterly results look great
 >
 > - Revenue was off the chart.
 > - Profits were higher than ever.
 >
 >   _Everything_ is going according to **plan**.
 
-## Horizontal Rules
+## 1.6. Horizontal Rules
 
 ---
 
