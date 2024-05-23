@@ -14,11 +14,9 @@ or
 yarn add framer-motion
 ```
 
-### For example
+### Usage
 
 ```ts
-import { motion } from "framer-motion";
-
 import { motion } from "framer-motion";
 
 const App = () => {
