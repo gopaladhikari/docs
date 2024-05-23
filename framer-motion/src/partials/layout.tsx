@@ -2,6 +2,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import { Header } from "./header";
 import { useEffect } from "react";
 import { site } from "../config/site";
+import { Footer } from "./footer";
 
 export function Layout() {
 	const { pathname } = useLocation();
@@ -29,6 +30,7 @@ export function Layout() {
 			<main role="main" className="p-6 min-h-screen space-y-8 container">
 				<Outlet />
 			</main>
+			<Footer />
 		</>
 	);
 }

@@ -9,8 +9,21 @@ export function Animation() {
 	};
 
 	const list: Variants = {
-		visible: { opacity: 1, transition: { duration: 2, ease: "linear" } },
-		hidden: { opacity: 0 },
+		visible: {
+			opacity: 1,
+			transition: {
+				when: "beforeChildren",
+				staggerChildren: 0.3,
+				bounce: 6,
+				damping: 0.5,
+			},
+		},
+		hidden: {
+			opacity: 0,
+			transition: {
+				when: "afterChildren",
+			},
+		},
 	};
 
 	const item: Variants = {
@@ -122,6 +135,135 @@ export function Animation() {
 					<motion.li variants={item}> This is list item</motion.li>
 				</motion.ul>
 			</section>
+
+			<section>
+				<h2># Orchestration</h2>
+				<motion.ul initial="hidden" animate="visible" variants={list}>
+					<motion.li variants={item}> This is list item</motion.li>
+					<motion.li variants={item}> This is list item</motion.li>
+					<motion.li variants={item}> This is list item</motion.li>
+				</motion.ul>
+			</section>
+
+			<motion.section
+				className="flex flex-col gap-6 border"
+				animate={{ opacity: 1, x: 0 }}
+				initial={{
+					x: -200,
+					opacity: 1,
+				}}
+				transition={{
+					duration: 1,
+					ease: "linear",
+					when: "beforeChildren",
+				}}
+			>
+				<motion.div
+					initial={{
+						x: 0,
+					}}
+					transition={{
+						duration: 2,
+						ease: "easeIn",
+						when: "afterChildren",
+					}}
+					animate={{
+						x: 100,
+					}}
+					className="size-24 bg-gray-500 rounded-full"
+				></motion.div>
+
+				<motion.div
+					initial={{
+						x: 0,
+					}}
+					transition={{
+						duration: 2,
+						ease: "easeIn",
+					}}
+					animate={{
+						x: 100,
+					}}
+					className="size-24 bg-gray-500 rounded-full"
+				></motion.div>
+
+				<motion.div
+					initial={{
+						x: 0,
+					}}
+					transition={{
+						duration: 2,
+						ease: "easeIn",
+					}}
+					animate={{
+						x: 100,
+					}}
+					className="size-24 bg-gray-500 rounded-full"
+				></motion.div>
+			</motion.section>
+
+			<motion.section
+				initial={{ opacity: 0, x: -200 }}
+				animate={{
+					opacity: 1,
+					x: 0,
+					transition: {
+						when: "beforeChildren",
+						staggerChildren: 0.3,
+						bounce: 6,
+						damping: 0.5,
+					},
+				}}
+			>
+				<motion.div
+					initial={{
+						opacity: 0,
+					}}
+					animate={{
+						opacity: 1,
+						transition: {
+							when: "afterChildren",
+						},
+					}}
+					className="size-24 rounded-full bg-gray-500"
+				></motion.div>
+				<motion.div
+					initial={{
+						opacity: 0,
+					}}
+					animate={{
+						opacity: 1,
+						transition: {
+							when: "afterChildren",
+						},
+					}}
+					className="size-24 rounded-full bg-gray-500"
+				></motion.div>
+				<motion.div
+					initial={{
+						opacity: 0,
+					}}
+					animate={{
+						opacity: 1,
+						transition: {
+							when: "afterChildren",
+						},
+					}}
+					className="size-24 rounded-full bg-gray-500"
+				></motion.div>
+				<motion.div
+					initial={{
+						opacity: 0,
+					}}
+					animate={{
+						opacity: 1,
+						transition: {
+							when: "afterChildren",
+						},
+					}}
+					className="size-24 rounded-full bg-gray-500"
+				></motion.div>
+			</motion.section>
 		</>
 	);
 }
