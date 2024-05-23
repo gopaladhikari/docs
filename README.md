@@ -20,6 +20,12 @@
 
 - It is easy to write and read with much simpler syntax.
 
+- It's extension are .md or .markdown
+
+- MDX is a js library that allows you to write JSX inside markdown files.
+
+- MDX is powerful, everythin is a component, customizable, markdown-based,blazingly blazing fast.
+
 # CSS: Cascading Style Sheets
 
 - CSS is the code that styles the web content. It is not a programming language.
