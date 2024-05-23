@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import "../../styles/animation.css";
 
 function Accordion() {
 	const [isOpen, setOpen] = useState(false);
