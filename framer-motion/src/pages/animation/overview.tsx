@@ -1,6 +1,13 @@
-import { AnimatePresence, motion, Variants } from "framer-motion";
+import {
+	AnimatePresence,
+	motion,
+	useAnimate,
+	Variants,
+} from "framer-motion";
+import { useEffect } from "react";
 
-export function Animation() {
+export function Overview() {
+	const [scope, animate] = useAnimate();
 	const isVisible = true;
 
 	const variants: Variants = {
@@ -31,11 +38,36 @@ export function Animation() {
 		hidden: { opacity: 0, x: -100 },
 	};
 
+	useEffect(() => {
+		const animation = async () => {
+			await animate(scope.current, { x: "50%" });
+			animate("li", { opacity: 1 });
+		};
+
+		animation();
+	}, []);
+
+	// useEffect(() => {
+	// 	const controls = animate(x, 100, {
+	// 		type: "spring",
+	// 		stiffness: 2000,
+	// 		onComplete: (v) => {
+	// 			console.log(v);
+	// 		},
+	// 	});
+
+	// 	return () => controls.stop();
+	// });
+
 	return (
 		<>
 			<section>
-				<h1> Animations</h1>
-				<p className="text-center">This is the animation page.</p>
+				<h1> Overview </h1>
+
+				<p className="text-center border-b pb-4">
+					This is the overview page of animations. It contains the basic
+					animations and the transition animations.
+				</p>
 
 				<h2 className="mt-4"># Simple animations</h2>
 				<motion.div animate={{ x: 100 }}>
@@ -264,6 +296,15 @@ export function Animation() {
 					className="size-24 rounded-full bg-gray-500"
 				></motion.div>
 			</motion.section>
+
+			<section>
+				<ul ref={scope}>
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+				</ul>
+			</section>
 		</>
 	);
 }

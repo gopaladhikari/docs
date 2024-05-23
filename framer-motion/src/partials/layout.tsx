@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { site } from "../config/site";
 import { Footer } from "./footer";
 
-export function Layout() {
+export function RootLayout() {
 	const { pathname } = useLocation();
 
 	useEffect(() => {
