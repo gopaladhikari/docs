@@ -1,0 +1,117 @@
+/* 
+* *  -------- Type/Tag Selectors --------
+*
+* * Type  selector sometimes refered as tag selector, it selects elements based on their tag name. Type selectors are not case sensitive.
+*/
+
+h1 {
+	color: red;
+}
+
+p {
+	color: red;
+}
+
+span {
+	background-color: yellow;
+}
+
+strong {
+	color: rebeccapurple;
+}
+
+em {
+	color: rebeccapurple;
+}
+
+h1 {
+	color: blue;
+}
+
+/* 
+* *  -------- The universal selector --------
+*
+*  Universal selector indicated as *, it selects all elements in the document
+*  or inside the parent element. It is ussually used to remove the default
+*  styling of the browser.
+*
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+section > * {
+	color: red;
+}
+
+/*  it selects the first child of all article elements */
+article:first-child {
+	color: red;
+}
+
+article *:first-child {
+	font-weight: bold;
+}
+
+/* 
+*  -------- Class Selectors --------
+*
+*  It's selection starts with a dot (.) and followed by the class name.
+*
+*  It selects all elements that have the class name.
+*
+*/
+
+.special {
+	color: red;
+}
+
+/* It selects all elements span that have the class name highlight */
+span.highlight {
+	background-color: yellow;
+}
+
+h1.highlight {
+	background-color: pink;
+}
+
+.notebox {
+	border: 4px solid #666;
+	padding: 0.5em;
+}
+
+/* This targets all elements with the class name notebook and the class name warning */
+.notebox.warning {
+	border-color: orange;
+	font-weight: bold;
+}
+
+/* This targets all elements with the class name notebook and the class name danger */
+.notebox.danger {
+	border-color: red;
+	font-weight: bold;
+}
+
+/* 
+*  -------- ID Selectors --------
+*
+*  It's selection starts with a hash (#) and followed by the id name.
+*  An id can be used only once per page.
+*
+*/
+
+#special {
+	color: red;
+}
+
+/* Targets all elements with the id name special  and the class name highlight */
+#special.highlight {
+	background-color: yellow;
+}
+
+/* This targets h1 elements with the id name heading */
+h1#heading {
+	color: rebeccapurple;
+}
