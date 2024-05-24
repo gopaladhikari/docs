@@ -20,6 +20,9 @@ function AnimationNav() {
 				<li>
 					<Link to="transition">Transition</Link>
 				</li>
+				<li>
+					<Link to="practice">Practice</Link>
+				</li>
 			</ul>
 		</nav>
 	);

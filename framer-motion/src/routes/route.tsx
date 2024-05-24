@@ -17,6 +17,7 @@ import { Layout } from "../pages/animation/layout";
 import { Overview } from "../pages/animation/overview";
 import { Scroll } from "../pages/animation/scroll";
 import { Transition } from "../pages/animation/transition";
+import { AnimationPractise } from "../practice/animation-practise";
 
 export const router = createBrowserRouter([
 	{
@@ -58,6 +59,10 @@ export const router = createBrowserRouter([
 					{
 						path: "transition",
 						element: <Transition />,
+					},
+					{
+						path: "practice",
+						element: <AnimationPractise />,
 					},
 				],
 			},
