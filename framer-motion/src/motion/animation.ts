@@ -55,10 +55,72 @@ const hightlightChildrenVariants: Variants = {
 	},
 };
 
+const websiteVariants: Variants = {
+	hidden: {
+		opacity: 0,
+		y: 25,
+	},
+
+	visible: {
+		y: 0,
+		opacity: 1,
+		transition: {
+			duration: 1,
+			ease: "linear",
+			staggerChildren: 0.5,
+			staggerDirection: -1,
+			when: "beforeChildren",
+		},
+	},
+};
+
+const websiteChildrenVariants: Variants = {
+	hidden: {
+		opacity: 0,
+		y: 25,
+	},
+	visible: {
+		opacity: 1,
+		y: 0,
+		transition: { duration: 1, type: "spring" },
+	},
+};
+
+const leftSwingVariants: Variants = {
+	hidden: {
+		opacity: 0,
+	},
+
+	visible: {
+		opacity: 1,
+		transition: {
+			duration: 1,
+			ease: "linear",
+			staggerChildren: 1,
+			when: "beforeChildren",
+		},
+	},
+};
+
+const leftSwingChildrenVariants: Variants = {
+	hidden: {
+		opacity: 0,
+		x: "-100%",
+	},
+	visible: {
+		opacity: 1,
+		x: 0,
+	},
+};
+
 export {
 	heroVariants,
 	heroChildrenVariants,
 	hightlightVariants,
 	hightlightChildrenVariants,
 	heroHeader,
+	websiteVariants,
+	websiteChildrenVariants,
+	leftSwingVariants,
+	leftSwingChildrenVariants,
 };

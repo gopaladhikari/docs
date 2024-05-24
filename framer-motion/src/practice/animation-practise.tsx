@@ -6,6 +6,10 @@ import {
 	hightlightVariants,
 	hightlightChildrenVariants,
 	heroHeader,
+	websiteVariants,
+	websiteChildrenVariants,
+	leftSwingVariants,
+	leftSwingChildrenVariants,
 } from "../motion/animation";
 
 export function AnimationPractise() {
@@ -41,7 +45,7 @@ export function AnimationPractise() {
 					variants={hightlightVariants}
 					initial="initial"
 					whileInView="whileInView"
-					className="flex justify-between items-center"
+					className="flex justify-between items-center "
 				>
 					<motion.h2
 						variants={hightlightChildrenVariants}
@@ -57,6 +61,177 @@ export function AnimationPractise() {
 							Watch the film
 						</motion.p>
 					</div>
+				</motion.div>
+				<div className="text-3xl">
+					1minus1 is an award-winning creative marketing agency dedicated
+					to the games industry
+				</div>
+
+				<div className="grid grid-cols-4 my-8">
+					<motion.div
+						variants={websiteVariants}
+						initial="hidden"
+						animate="visible"
+					>
+						<motion.p
+							variants={websiteChildrenVariants}
+							className="text-center"
+						>
+							<strong className="text-xl">Website</strong>
+						</motion.p>
+						<ul className="text-center space-y-3 mt-6">
+							<motion.li variants={websiteChildrenVariants}>
+								Game Studio websites
+							</motion.li>
+							<motion.li variants={websiteChildrenVariants}>
+								Game Studio websites
+							</motion.li>
+							<motion.li variants={websiteChildrenVariants}>
+								Game Studio websites
+							</motion.li>
+							<motion.li variants={websiteChildrenVariants}>
+								Game Studio websites
+							</motion.li>
+							<motion.li variants={websiteChildrenVariants}>
+								Game Studio websites
+							</motion.li>
+						</ul>
+					</motion.div>
+					<motion.div
+						variants={websiteVariants}
+						initial="hidden"
+						animate="visible"
+					>
+						<motion.p
+							variants={websiteChildrenVariants}
+							className="text-center"
+						>
+							<strong className="text-xl">Website</strong>
+						</motion.p>
+						<ul className="text-center space-y-3 mt-6">
+							<motion.li variants={websiteChildrenVariants}>
+								Game Studio websites
+							</motion.li>
+							<motion.li variants={websiteChildrenVariants}>
+								Game Studio websites
+							</motion.li>
+							<motion.li variants={websiteChildrenVariants}>
+								Game Studio websites
+							</motion.li>
+							<motion.li variants={websiteChildrenVariants}>
+								Game Studio websites
+							</motion.li>
+							<motion.li variants={websiteChildrenVariants}>
+								Game Studio websites
+							</motion.li>
+						</ul>
+					</motion.div>
+					<motion.div
+						variants={websiteVariants}
+						initial="hidden"
+						animate="visible"
+					>
+						<motion.p
+							variants={websiteChildrenVariants}
+							className="text-center"
+						>
+							<strong className="text-xl">Website</strong>
+						</motion.p>
+						<ul className="text-center space-y-3 mt-6">
+							<motion.li variants={websiteChildrenVariants}>
+								Game Studio websites
+							</motion.li>
+							<motion.li variants={websiteChildrenVariants}>
+								Game Studio websites
+							</motion.li>
+							<motion.li variants={websiteChildrenVariants}>
+								Game Studio websites
+							</motion.li>
+							<motion.li variants={websiteChildrenVariants}>
+								Game Studio websites
+							</motion.li>
+							<motion.li variants={websiteChildrenVariants}>
+								Game Studio websites
+							</motion.li>
+						</ul>
+					</motion.div>
+					<motion.div
+						variants={websiteVariants}
+						initial="hidden"
+						animate="visible"
+					>
+						<motion.p
+							variants={websiteChildrenVariants}
+							className="text-center"
+						>
+							<strong className="text-xl">Website</strong>
+						</motion.p>
+						<ul className="text-center space-y-3 mt-6">
+							<motion.li variants={websiteChildrenVariants}>
+								Game Studio websites
+							</motion.li>
+							<motion.li variants={websiteChildrenVariants}>
+								Game Studio websites
+							</motion.li>
+							<motion.li variants={websiteChildrenVariants}>
+								Game Studio websites
+							</motion.li>
+							<motion.li variants={websiteChildrenVariants}>
+								Game Studio websites
+							</motion.li>
+							<motion.li variants={websiteChildrenVariants}>
+								Game Studio websites
+							</motion.li>
+						</ul>
+					</motion.div>
+				</div>
+
+				<motion.div
+					variants={leftSwingVariants}
+					initial="hidden"
+					animate="visible"
+					className="grid grid-cols-4 gap-8"
+				>
+					<motion.div
+						variants={leftSwingChildrenVariants}
+						whileHover={{
+							scale: 1.2,
+						}}
+						layout
+						className="rounded-md bg-orange-600 size-64 mx-auto"
+					>
+						1
+					</motion.div>
+					<motion.div
+						variants={leftSwingChildrenVariants}
+						whileHover={{
+							scale: 1.2,
+						}}
+						layout
+						className="rounded-md bg-orange-600 size-64 mx-auto"
+					>
+						1
+					</motion.div>
+					<motion.div
+						variants={leftSwingChildrenVariants}
+						whileHover={{
+							scale: 1.2,
+						}}
+						layout
+						className="rounded-md bg-orange-600 size-64 mx-auto"
+					>
+						1
+					</motion.div>
+					<motion.div
+						variants={leftSwingChildrenVariants}
+						whileHover={{
+							scale: 1.2,
+						}}
+						layout
+						className="rounded-md bg-orange-600 size-64 mx-auto"
+					>
+						1
+					</motion.div>
 				</motion.div>
 			</section>
 		</main>
