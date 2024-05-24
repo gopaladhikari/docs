@@ -30,4 +30,8 @@
 	p {
 		@apply text-lg;
 	}
+
+	section {
+		@apply my-16;
+	}
 }
