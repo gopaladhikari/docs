@@ -91,3 +91,32 @@ article p:first-child::first-line {
 	font-size: 120%;
 	font-weight: bold;
 }
+
+/* 
+	* ---------------- Generating content with ::before and ::after -----------
+
+	* There are a couple of special pseudo-elements, which are used along with the content property to insert content into your document using CSS.
+
+	* You could use these to insert a string of text, such as in the live example below. Try changing the text value of the content property and see it change in the output. You could also change the ::before pseudo-element to ::after and see the text inserted at the end of the element instead of the beginning.
+ */
+
+.box::before {
+	content: "This should show before the other content. ";
+}
+
+.box::after {
+	content: "This should be appear after the content";
+}
+
+.box::after {
+	content: " ➥";
+}
+
+.box::before {
+	content: "";
+	display: block;
+	width: 100px;
+	height: 100px;
+	background-color: rebeccapurple;
+	border: 1px solid black;
+}
