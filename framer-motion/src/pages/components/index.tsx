@@ -1,27 +1,20 @@
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
+import { site } from "../../config/site";
 
 function ComponentsNav() {
+	const { pathname } = useLocation();
+
 	return (
 		<nav>
 			<ul className="flex items-center gap-6 bg-slate-800 p-4 rounded-lg">
-				<li>
-					<Link to=".">Motion</Link>
-				</li>
-				<li>
-					<Link to="animate-presence">Animate Presence</Link>
-				</li>
-				<li>
-					<Link to="layout-group">Layout Group</Link>
-				</li>
-				<li>
-					<Link to="lazy-motion">Lazy Motion</Link>
-				</li>
-				<li>
-					<Link to="motion-config">Motion Config</Link>
-				</li>
-				<li>
-					<Link to="reorder">Reorder</Link>
-				</li>
+				{site.menu.componentsNav.map((item) => (
+					<li
+						key={item.name}
+						className={`${pathname === item.path ? "text-red-500" : ""}`}
+					>
+						<Link to={item.path}>{item.name}</Link>
+					</li>
+				))}
 			</ul>
 		</nav>
 	);
