@@ -36,7 +36,6 @@ li[class~="a"] {
 
 * 3. [attr*=value] matches elements that have the attribute attr with a value that contains value. eg- button[type*="submit"]
 
-
 */
 
 /* Selects all the li elements that have the class attribute with a value that starts with a */
@@ -70,7 +69,8 @@ li[class*="a"] {
 }
 
 /* 
-  * Case-sensitivity
+  * ------------ Case-sensitivity -------------
+
   * By default attribute selectors are case-sensitive. If you want to make the attribute selector case-insensitive, you can pass the i modifier to the attribute selector.
  */
 

@@ -1,0 +1,93 @@
+/* 
+*  ---------- Pseudo-classes ----------
+*
+*  Pseudo-classes are used to select elements based on the certain state of an element. Pseudo-classes are keywords that start with a colon. For example, :hover is a pseudo-class.
+*
+*  The most common pseudo-classes are:
+*   01. :link
+*   02. :visited
+*   03. :hover
+*   04. :active
+*   05. :focus
+*   06. :target
+*   07. :lang
+*   08. last-child
+*   09. only-child
+*   10. invalid
+*/
+
+a:link {
+	color: red;
+}
+
+a:visited {
+	color: red;
+}
+
+a:hover {
+	color: red;
+}
+
+a:active {
+	color: red;
+}
+
+input:focus {
+	color: blue;
+}
+
+div:target {
+	color: blue;
+}
+
+body:lang(en) {
+	color: blue;
+}
+
+/* This increases the font size and weight of a first paragraph inside article */
+article p:first-child {
+	font-size: 120%;
+	font-weight: bold;
+}
+
+/* 
+* ----------- Pseudo Elements ------------
+
+* Pseudo-elements  act as if you had added a whole new HTML element into the markup, rather than applying a class to existing elements.
+
+* Pseudo-elements start with a double colon ::. ::before is an example of a pseudo-element. 
+
+* Some of the pseudo elements are
+* 1. ::before
+* 2. ::after
+* 3. ::first-line
+
+*/
+
+p::after {
+	content: "";
+}
+
+p::before {
+	content: "";
+}
+
+p::first-line {
+	font-size: 24px;
+}
+
+p::first-letter {
+	font-size: 40px;
+}
+
+/* 
+* ----------------Combining pseudo-classes and pseudo-elements -----------
+
+*/
+
+/* This icreases the font size and weight of first line of first paragraph of all article. */
+
+article p:first-child::first-line {
+	font-size: 120%;
+	font-weight: bold;
+}
