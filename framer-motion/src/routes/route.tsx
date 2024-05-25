@@ -2,7 +2,6 @@ import { createBrowserRouter } from "react-router-dom";
 import { Home } from "../pages/Home";
 import { RootLayout } from "../partials/layout";
 import { ThreeD } from "../pages/3d";
-import { Components } from "../pages/components";
 import { MotionValues } from "../pages/motion-values";
 import { Universal } from "../pages/universal";
 import { Hooks } from "../pages/hooks";
@@ -18,6 +17,13 @@ import { Overview } from "../pages/animation/overview";
 import { Scroll } from "../pages/animation/scroll";
 import { Transition } from "../pages/animation/transition";
 import { AnimationPractise } from "../practice/animation-practise";
+import { ComponentsLayout } from "../pages/components";
+import { Reorder } from "../pages/components/reorder";
+import { MotionConfig } from "../pages/components/motion-config";
+import { LazyMotion } from "../pages/components/lazy-motion";
+import { AnimatePresence } from "../pages/components/animate-presence";
+import { LayoutGroup } from "../pages/components/layout-group";
+import { Motion } from "../pages/components/motion";
 
 export const router = createBrowserRouter([
 	{
@@ -68,7 +74,33 @@ export const router = createBrowserRouter([
 			},
 			{
 				path: "components",
-				element: <Components />,
+				element: <ComponentsLayout />,
+				children: [
+					{
+						path: "",
+						element: <Motion />,
+					},
+					{
+						path: "animate-presence",
+						element: <AnimatePresence />,
+					},
+					{
+						path: "layout-group",
+						element: <LayoutGroup />,
+					},
+					{
+						path: "lazy-motion",
+						element: <LazyMotion />,
+					},
+					{
+						path: "motion-config",
+						element: <MotionConfig />,
+					},
+					{
+						path: "reorder",
+						element: <Reorder />,
+					},
+				],
 			},
 			{
 				path: "components-practise",
