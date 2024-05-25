@@ -1,0 +1,85 @@
+/* 
+*  -------  Attribute selectors --------
+*
+*  Attribute selectors target an element that has a certain attribute.
+*
+* Presence and value selectors
+* 1. [attr] matches elements that have the attribute attr. eg- button[type]
+* 2. [attr=value] matches elements that have the attribute attr with the value value. eg- button[type=submit]
+* 3. [attr~=value] matches elements that have the attribute attr with a value that contains value. eg- button[type~=submit]
+* [attr|=value] matches elements that have the attribute attr with a value that starts with value. eg- button[type|=submit]
+*/
+
+/* Selects all the li elements that have the class attribute */
+li[class] {
+	font-size: 200%;
+}
+
+/* Selects all the li elements that have the class attribute with the value a */
+li[class="a"] {
+	background-color: yellow;
+}
+
+/* Selects all the li elements that have the class attribute with a value that contains a */
+li[class~="a"] {
+	color: red;
+}
+
+/* 
+* ----------- Substring matching selectors ----------------
+
+* It allows you to advanced matching the substring of the attribute value.
+
+* 1. [attr^=value] matches elements that have the attribute attr with a value that starts with value. eg- button[type^="submit"]
+
+* 2. [attr$=value] matches elements that have the attribute attr with a value that ends with value. eg- button[type$="submit"]
+
+* 3. [attr*=value] matches elements that have the attribute attr with a value that contains value. eg- button[type*="submit"]
+
+
+*/
+
+/* Selects all the li elements that have the class attribute with a value that starts with a */
+li[class^="a"] {
+	font-size: 200%;
+}
+
+/* Selects all the li elements that have the class attribute with a value that ends with a */
+li[class$="a"] {
+	background-color: yellow;
+}
+
+/* Selects all the li elements that have the class attribute with a value that contains a */
+li[class*="a"] {
+	color: red;
+}
+
+/* Selects all the li elements that have the class attribute with a value that starts with a */
+li[class^="a"] {
+	background-color: yellow;
+}
+
+/* Selects all the li elements that have the class attribute with a value that ends with a */
+li[class$="a"] {
+	color: red;
+}
+
+/* Selects all the li elements that have the class attribute with a value that contains a */
+li[class*="a"] {
+	font-size: 200%;
+}
+
+/* 
+  * Case-sensitivity
+  * By default attribute selectors are case-sensitive. If you want to make the attribute selector case-insensitive, you can pass the i modifier to the attribute selector.
+ */
+
+/* It selects all the li elements that have the class attribute with a value that starts with a */
+li[class^="a"] {
+	background-color: yellow;
+}
+
+/* It selects all the li elements that have the class attribute with a value that starts with a or A */
+li[class^="a" i] {
+	color: red;
+}
