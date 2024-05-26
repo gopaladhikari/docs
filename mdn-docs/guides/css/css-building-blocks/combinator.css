@@ -1,0 +1,118 @@
+/* 
+* -------------- Descendant combinator -------------
+
+* The descendent combinator combines two selector such that element matched by second selector are selected
+
+* It selects all the elements in it's hierarchy.
+
+*/
+
+/* This selects the p insdie the article inside body  */
+body article p {
+	text-align: center;
+}
+
+/* This selects the paragraph inside the box class */
+.box p {
+	color: red;
+}
+
+/* All li will have border top */
+ul li {
+	border-top: 5px solid red;
+}
+
+/* 
+* ---------------- Child combinator ----------------
+
+* The child combinator ( > ) is placed between two CSS selector, it only selects the direct child of first selector .
+
+*/
+
+/* Direct child of ul will only have the border top. */
+ul > li {
+	border-top: 5px solid red;
+}
+
+/* 
+* ------------------ Next-sibling combinator ---------------
+
+* The next-sibling combinator ( + ) is placed between two CSS selector, it only selects the next sibling of first selector.
+
+* It matches all the second element followed by the first elements.
+*/
+
+/* Applies css to all p which comes after  h1 */
+h1 + p {
+	font-weight: bold;
+	background-color: #333;
+	color: #fff;
+	padding: 0.5em;
+}
+
+/* 
+ * ----------------- Subsequent-sibling combinator ----------------------
+
+ * The subsequent-sibling combinator ( ~ ) is placed between two CSS selector, it only selects the subsequent sibling of first selector.
+
+*/
+
+/* It selects all p which is initally followed by h1 */
+h1 ~ p {
+	font-weight: bold;
+	background-color: #333;
+	color: #fff;
+	padding: 0.5em;
+}
+
+/* 
+* --------------- Creating complex selectors with nesting --------------
+
+* The CSS nesting module allows you to write nested rules that use combinators to create complex selectors.
+
+*/
+
+/* Example 1  */
+p {
+	~ img {
+		color: red;
+	}
+}
+
+/* This is parsed by the browser as */
+p ~ img {
+	color: red;
+}
+
+/* Example 2 */
+p {
+	& img {
+		color: red;
+	}
+}
+
+/* This is parsed by the browser as */
+p img {
+	color: red;
+}
+
+/* Eg 3 */
+h1 {
+	& ~ p {
+		/* this is parsed by the browser as h1 ~ p */
+		font-weight: bold;
+		background-color: #333;
+		color: #fff;
+		padding: 0.5em;
+	}
+}
+
+/* 
+* ----------- Using combinators --------------
+
+
+*/
+
+ul > li[class="a"] {
+	color: rebeccapurple;
+}
