@@ -1,0 +1,120 @@
+/* 
+* ------------- Cascade, specificity, and inheritance ----------
+
+* The cascade, specificity, and inheritance — which control how CSS is applied to HTML and how conflicts between style declarations are resolved.
+
+*/
+
+/* 
+* ---------- Conflicting rules ---------
+*/
+
+/* When two rules from the same cascade layer apply and both have equal specificity, the one that is defined last in the stylesheet is the one that will be used, h1 will have blue color */
+
+h1 {
+	color: red;
+}
+h1 {
+	color: blue;
+}
+
+/* 
+* ----------- Specificity --------------
+
+ * Specificity is a measure of how specific an element is.
+ * An element selector is less specific; 
+ * A class selector is more specific; 
+ */
+
+/* Assuming the main-heading class s applied in h1, it will have color red  */
+
+.main-heading {
+	color: red;
+}
+
+h1 {
+	color: blue;
+}
+
+/* 
+  * ----------------- Inheritance ----------------
+
+  * Some CSS property values set on parent elements are inherited by their child elements, and some aren't.
+
+*/
+
+/* 
+For example, if you set a color and font-family on an element, every element inside it will also be styled with that color and font, unless you've applied different color and font values directly to them.
+ */
+
+body {
+	color: blue;
+}
+
+span {
+	color: black;
+}
+
+/* 
+Some properties do not inherit — for example, if you set a width of 50% on an element, all of its descendants do not get a width of 50% of their parent's width. If this was the case, CSS would be very frustrating to use!
+ */
+
+/*
+ Properties like width (as mentioned earlier), margin, padding, and border are not inherited properties. I
+ */
+
+/* 
+
+
+/* 1. specificity: 1-0-1 */
+#outer a {
+	background-color: red;
+}
+
+/* 2. specificity: 2-0-1 */
+#outer #inner a {
+	background-color: blue;
+}
+
+/* 3. specificity: 1-0-4 */
+#outer div ul li a {
+	color: yellow;
+}
+
+/* 4. specificity: 1-1-3 */
+#outer div ul .nav a {
+	color: white;
+}
+
+/* 5. specificity: 0-2-4 */
+div div li:nth-child(2) a:hover {
+	border: 10px solid black;
+}
+
+/* 6. specificity: 0-2-3 */
+div li:nth-child(2) a:hover {
+	border: 10px dashed black;
+}
+
+/* 7. specificity: 0-3-3 */
+div div .nav:nth-child(2) a:hover {
+	border: 10px double black;
+}
+
+a {
+	display: inline-block;
+	line-height: 40px;
+	font-size: 20px;
+	text-decoration: none;
+	text-align: center;
+	width: 200px;
+	margin-bottom: 10px;
+}
+
+ul {
+	padding: 0;
+}
+
+li {
+	list-style-type: none;
+}
