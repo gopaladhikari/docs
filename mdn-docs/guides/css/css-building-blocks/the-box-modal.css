@@ -1,0 +1,67 @@
+/* 
+ * ------------ Box Modal ---------------
+
+*/
+
+.box {
+	border: 5px solid rebeccapurple;
+	background-color: lightgray;
+	padding: 40px;
+	margin: 40px;
+	width: 300px;
+	height: 150px;
+}
+
+.alternate {
+	box-sizing: border-box;
+}
+
+.box {
+	margin-top: -40px;
+	margin-right: 30px;
+	margin-bottom: 40px;
+	margin-left: 4em;
+}
+
+.container {
+	border-top: 5px dotted green;
+	border-right: 1px solid black;
+	border-bottom: 20px double rgb(23 45 145);
+}
+
+.box {
+	border: 1px solid #333333;
+	border-top-style: dotted;
+	border-right-width: 20px;
+	border-bottom-color: hotpink;
+}
+
+.box {
+	padding-top: 0;
+	padding-right: 30px;
+	padding-bottom: 40px;
+	padding-left: 4em;
+}
+
+.container {
+	padding: 20px;
+}
+
+span {
+	margin: 20px;
+	padding: 20px;
+	width: 80px;
+	height: 50px;
+	background-color: lightblue;
+	border: 2px solid blue;
+}
+
+span {
+	margin: 20px;
+	padding: 20px;
+	width: 80px;
+	height: 50px;
+	background-color: lightblue;
+	border: 2px solid blue;
+	display: inline-block;
+}
