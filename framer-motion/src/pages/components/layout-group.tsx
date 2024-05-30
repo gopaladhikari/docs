@@ -31,7 +31,7 @@ export function LayoutGroup() {
       <ToggleContent
         header="This is from another"
         content="Jinjalala hurhur"
-      />{" "}
+      />
     </LG>
   );
 }
