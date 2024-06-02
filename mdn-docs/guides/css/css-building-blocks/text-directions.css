@@ -1,0 +1,11 @@
+h1 {
+  writing-mode: vertical-rl;
+}
+
+h2 {
+  writing-mode: vertical-rl;
+}
+
+h3 {
+  writing-mode: horizontal-tb;
+}
