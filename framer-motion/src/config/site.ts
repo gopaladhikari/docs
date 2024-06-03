@@ -173,5 +173,24 @@ export const site = {
         path: "/universal/transform",
       },
     ],
+
+    threeNav: [
+      {
+        name: "Introduction",
+        path: "/three",
+      },
+      {
+        name: "Layout Camera",
+        path: "/three/layout-camera",
+      },
+      {
+        name: "Layout Orthographic Camera",
+        path: "/three/layout-orthographic-camera",
+      },
+      {
+        name: "Motion Canvas",
+        path: "/three/motion-canvas",
+      },
+    ],
   },
 };

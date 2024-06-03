@@ -1,10 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Home } from "../pages/Home";
 import { RootLayout } from "../partials/layout";
-import { ThreeD } from "../pages/3d";
-
-import ThreeDPractise from "../practice/threeD-practise";
-
 import { AnimationLayout } from "../pages/animation";
 import { Gesture } from "../pages/animation/gesture";
 import { Layout } from "../pages/animation/layout";
@@ -43,6 +38,12 @@ import Transform from "../pages/universal/transform";
 import EasingFunction from "../pages/universal/easing-function";
 import Universallayout from "../pages/universal/index";
 import UniversalScroll from "../pages/universal/scroll";
+import { Home } from "../pages/Home";
+import ThreeLayout from "../pages/three";
+import LayoutCamera from "../pages/three/layout-camera";
+import LayoutOrthographicCamera from "../pages/three/LayoutOrthographicCamera";
+import MotionCanvas from "../pages/three/MotionCanvas";
+import Introduction from "../pages/three/introduction";
 
 export const router = createBrowserRouter([
   {
@@ -53,14 +54,7 @@ export const router = createBrowserRouter([
         path: "",
         element: <Home />,
       },
-      {
-        path: "three",
-        element: <ThreeD />,
-      },
-      {
-        path: "three-practice",
-        element: <ThreeDPractise />,
-      },
+
       {
         path: "animation",
         element: <AnimationLayout />,
@@ -221,6 +215,28 @@ export const router = createBrowserRouter([
           {
             path: "transform",
             element: <Transform />,
+          },
+        ],
+      },
+      {
+        path: "three",
+        element: <ThreeLayout />,
+        children: [
+          {
+            path: "",
+            element: <Introduction />,
+          },
+          {
+            path: "layout-camera",
+            element: <LayoutCamera />,
+          },
+          {
+            path: "layout-orthographic-camera",
+            element: <LayoutOrthographicCamera />,
+          },
+          {
+            path: "motion-canvas",
+            element: <MotionCanvas />,
           },
         ],
       },
