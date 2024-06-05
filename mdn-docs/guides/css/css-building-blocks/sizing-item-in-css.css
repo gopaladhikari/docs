@@ -1,0 +1,31 @@
+img {
+  border: 5px solid darkblue;
+}
+
+.box {
+  border: 5px solid darkblue;
+}
+
+.box {
+  border: 5px solid darkblue;
+  height: 150px;
+  width: 200px;
+}
+
+.box {
+  border: 5px solid darkblue;
+  width: 50%;
+}
+
+.box {
+  border: 5px solid darkblue;
+  width: 300px;
+  margin: 10%;
+  padding: 10%;
+}
+
+.box {
+  border: 5px solid darkblue;
+  min-height: 150px;
+  width: 200px;
+}
