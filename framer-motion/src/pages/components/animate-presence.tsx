@@ -30,7 +30,9 @@ export function AnimatePresence() {
       <h1>Animate Presence</h1>
       <p>Animate components when they're removed from the React tree.</p>
 
-      <button onClick={() => setIsVisible(!isVisible)}>Remove para</button>
+      <button onClick={() => setIsVisible(!isVisible)}>
+        {isVisible ? "Remove" : "Add"} para
+      </button>
 
       <div className="space-y-12 mt-16">
         <AP>
