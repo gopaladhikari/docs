@@ -1,3 +1,7 @@
+import { useMotionValue } from "framer-motion";
+
 export default function UseSpring() {
-  return <div>UseSpring</div>;
+  const x = useMotionValue(0);
+
+  return <div>{x.get()}</div>;
 }
