@@ -6,7 +6,6 @@ import { Layout } from "../pages/animation/layout";
 import { Overview } from "../pages/animation/overview";
 import { Scroll } from "../pages/animation/scroll";
 import { Transition } from "../pages/animation/transition";
-import { AnimationPractise } from "../practice/animation-practise";
 import { ComponentsLayout } from "../pages/components";
 import { Reorder } from "../pages/components/reorder";
 import { MotionConfig } from "../pages/components/motion-config";
@@ -44,6 +43,8 @@ import LayoutCamera from "../pages/three/layout-camera";
 import LayoutOrthographicCamera from "../pages/three/LayoutOrthographicCamera";
 import MotionCanvas from "../pages/three/MotionCanvas";
 import Introduction from "../pages/three/introduction";
+import PractiseOveriew from "../pages/practice";
+import Portfolio from "../pages/practice/portfolio";
 
 export const router = createBrowserRouter([
   {
@@ -53,6 +54,16 @@ export const router = createBrowserRouter([
       {
         path: "",
         element: <Home />,
+      },
+      {
+        path: "practise",
+        element: <PractiseOveriew />,
+        children: [
+          {
+            path: "",
+            element: <Portfolio />,
+          },
+        ],
       },
 
       {
@@ -78,10 +89,6 @@ export const router = createBrowserRouter([
           {
             path: "transition",
             element: <Transition />,
-          },
-          {
-            path: "practice",
-            element: <AnimationPractise />,
           },
         ],
       },

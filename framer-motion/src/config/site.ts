@@ -30,6 +30,10 @@ export const site = {
         name: "Hooks",
         path: "/hooks",
       },
+      {
+        name: "practise",
+        path: "/practise",
+      },
     ],
 
     animationNav: [
@@ -190,6 +194,13 @@ export const site = {
       {
         name: "Motion Canvas",
         path: "/three/motion-canvas",
+      },
+    ],
+
+    practiseNav: [
+      {
+        name: "Portfolio",
+        path: "/practise",
       },
     ],
   },

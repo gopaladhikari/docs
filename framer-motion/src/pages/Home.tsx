@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export function Home() {
 	return (
-		<section className="mt-8 flex flex-col items-center justify-center gap-4">
+		<div className="mt-8 flex flex-col items-center justify-center gap-4">
 			<motion.h1
 				whileHover={{ scale: 1.2 }}
 				whileTap={{ scale: 1.1 }}
@@ -16,6 +16,6 @@ export function Home() {
 				provides a simple and intuitive API for animating elements and
 				components.
 			</p>
-		</section>
+		</div>
 	);
 }
