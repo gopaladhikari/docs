@@ -38,8 +38,8 @@ function Toggle({
           stroke="black"
           strokeLinecap="round"
           variants={{
-            open: { d: "M 2 2.5 L 20 2.5" },
-            close: { d: "M 3 16.5 L 17 2.5" },
+            close: { d: "M 2 2.5 L 20 2.5" },
+            open: { d: "M 3 16.5 L 17 2.5" },
           }}
         />
         <motion.path
@@ -48,8 +48,8 @@ function Toggle({
           strokeLinecap="round"
           d="M 2 9.246 L 20 9.246"
           variants={{
-            open: { opacity: 1 },
-            close: { opacity: 0 },
+            close: { opacity: 1 },
+            open: { opacity: 0 },
           }}
         />
         <motion.path
@@ -57,8 +57,8 @@ function Toggle({
           stroke="black"
           strokeLinecap="round"
           variants={{
-            open: { d: "M 2 16.246 L 20 16.246" },
-            close: { d: "M 3 2.5 L 17 16.246" },
+            close: { d: "M 2 16.246 L 20 16.246" },
+            open: { d: "M 3 2.5 L 17 16.246" },
           }}
         />
       </svg>
@@ -99,7 +99,7 @@ export default function Sidebar() {
 
     close: {
       transition: {
-        staggerChildren: 0.05,
+        staggerChildren: 0.1,
         staggerDirection: -1,
       },
     },
