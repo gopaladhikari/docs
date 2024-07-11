@@ -1,39 +1,39 @@
 h1 {
-	color: red;
+  color: red;
 }
 
 p,
 li {
-	color: green;
+  color: green;
 }
 
 li {
-	list-style-type: none;
+  list-style-type: none;
 }
 
 .special {
-	color: orange;
-	font-weight: bold;
+  color: orange;
+  font-weight: bold;
 }
 
 /* descendant combinator */
 li em {
-	color: rebeccapurple;
+  color: rebeccapurple;
 }
 
 /* an next-sibling combinator */
 h1 + p {
-	font-size: 200%;
+  font-size: 200%;
 }
 
 a:link {
-	color: pink;
+  color: pink;
 }
 
 a:visited {
-	color: green;
+  color: green;
 }
 
 a:hover {
-	text-decoration: none;
+  text-decoration: none;
 }
