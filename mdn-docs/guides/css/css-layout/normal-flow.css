@@ -1,0 +1,14 @@
+.box {
+  background-color: red;
+  height: 300px;
+  width: 300px;
+  display: inline-flex;
+}
+
+.box1 {
+  margin-right: 10px;
+}
+
+.box2 {
+  margin-left: 50px;
+}
