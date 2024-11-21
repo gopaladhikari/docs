@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      button {
+        padding: 10px;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Events</h1>
+    <p>Events are actions that happen in the browser.</p>
+    <p>
+      For example, when you click on a button, the browser sends an event
+      to the button. The button can then do something in response to the
+      event.
+    </p>
+
+    <button id="myButton">Click me</button>
+
+    <button
+      onclick="alert('Hello, this is my old-fashioned event handler!');"
+    >
+      Press me
+    </button>
+
+    <input id="textBox" type="text" />
+    <div id="output"></div>
+
+    <form>
+      <div>
+        <label for="fname">First name: </label>
+        <input id="fname" type="text" />
+      </div>
+      <div>
+        <label for="lname">Last name: </label>
+        <input id="lname" type="text" />
+      </div>
+      <div>
+        <input id="submit" type="submit" />
+      </div>
+    </form>
+    <p></p>
+
+    <script>
+      const btn = document.querySelector("#myButton");
+      const textBox = document.querySelector("#textBox");
+      const output = document.querySelector("#output");
+      const form = document.querySelector("form");
+      const fname = document.getElementById("fname");
+      const lname = document.getElementById("lname");
+      const para = document.querySelector("p");
+
+      const controller = new AbortController();
+
+      function random(number) {
+        return Math.floor(Math.random() * number);
+      }
+
+      function bgChange(e) {
+        const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
+        e.target.style.backgroundColor = rndCol;
+        console.log(e);
+      }
+
+      btn.addEventListener("click", bgChange, {
+        signal: controller.signal,
+      });
+
+      textBox.addEventListener("keydown", (event) => {
+        output.textContent += `${event.key}`;
+      });
+
+      form.addEventListener("submit", (e) => {
+        if (fname.value === "" || lname.value === "") {
+          e.preventDefault();
+          para.textContent = "You need to fill in both names!";
+        }
+      });
+    </script>
+  </body>
+</html>
