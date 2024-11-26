@@ -65,7 +65,7 @@ export function App2() {
       <ul className="space-y-6 mt-4">
         {posts?.map((post) => (
           <li key={post.id}>
-            <h2 className="text-xl font-bold">{post.title}</h2>
+            <h2 className="text-xl font-bold text-green">{post.title}</h2>
             <p className="text-gray-400 text-sm">{post.body}</p>
           </li>
         ))}
